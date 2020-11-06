@@ -12,7 +12,7 @@ export default function GreetingForm({ content }) {
             <p className="form-section__text">
               {content.formText.formText}
             </p>
-            <div className="greeting-form">
+            <form className="greeting-form">
               <UITextInput placeholder="Name" />
               <UITextInput placeholder="Venue Name" />
               <div className="greeting-form__cities">
@@ -22,7 +22,7 @@ export default function GreetingForm({ content }) {
               <UITextInput placeholder="Email" />
               <UITextArea placeholder="Message" />
               <UIButton className="greeting-form__button" title={content.formButtonText} />
-            </div>
+            </form>
         </div>
       </div>
     </section>
