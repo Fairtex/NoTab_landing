@@ -1,6 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Stores } from "@components/UIComponents"
+import Ellipse from "../../../assets/images/noTab-hero-bg-vector.svg"
 
 const Hero = ({ content }) => {
   return (
@@ -9,18 +10,19 @@ const Hero = ({ content }) => {
         <div className="hero__inner">
           <div className="hero__row">
             <div className="hero__info">
-              <h2 className="hero__title title">
+              <h2 className="hero__title">
                 {content.heroTitle}
               </h2>
-              <p className="main-header__info-text text">
+              <p className="hero__info-text">
                 {content.heroText.heroText}
               </p>
             </div>
             <div className="hero__img-wrap">
-              <Img fluid={content.heroImage.fluid}/>
+              <Ellipse className="hero__blur-ellipse"/>
+              <Img fluid={content.heroImage.fluid} className="hero__img"/>
             </div>
           </div>
-          <div className="hero__row">
+          <div className="hero__row hero__row--space">
             <p className="hero__download-text">
               DOWNLOAD OUR APP
             </p>

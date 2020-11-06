@@ -23,11 +23,11 @@ const Header = () => {
       <div className="container">
         <div className="header__inner">
           <div className="header__logo-wrap">
-            <Img fixed={logoImg.childImageSharp.fixed}/>
+            <Img fixed={logoImg.childImageSharp.fixed} className="header__logo-img"/>
             <CompanyName />
           </div>
           <a href="#" className="header__link">
-            <LoginIcon />
+            <LoginIcon className="header__link-logo"/>
             <span className="header__link-text">
               Login
             </span>

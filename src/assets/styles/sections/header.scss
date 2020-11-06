@@ -2,5 +2,36 @@ $block: '.header';
 #{$block} {
   background: $background;
 
-  
+  &__inner {
+    padding: 23px 5.9% 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-wrap {
+    display: flex;
+    align-items: center;
+    margin-right: 108px;
+  }
+
+  &__logo-img {
+    margin-right: 8px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &-logo {
+      margin-right: 14px;
+    }
+
+    &-text {
+      position: relative;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      border-bottom: 1px solid #ffffff;
+    }
+  }
 }
