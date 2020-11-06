@@ -1,0 +1,62 @@
+$fontTitle: 'Montserrat', 'sans-serif';
+$fontText: 'NotoSans', 'sans-serif';
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+    url('../fonts/NotoSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+    url('../fonts/NotoSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('../fonts/Avenir-Book.woff2') format('woff2'),
+    url('../fonts/Avenir-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('../fonts/Avenir-Medium.woff2') format('woff2'),
+    url('../fonts/Avenir-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url('../fonts/Avenir-Heavy.woff2') format('woff2'),
+    url('../fonts/Avenir-Heavy.woff') format('woff');
+}

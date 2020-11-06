@@ -1,0 +1,19 @@
+//vendor
+@import "vendor/normalize";
+//common
+@import "common/colors";
+@import "common/fonts";
+@import "common/variables";
+@import "common/reset";
+@import "common/main";
+//sections
+@import "sections/header";
+@import "sections/hero";
+@import "sections/partners";
+@import "sections/animation";
+@import "sections/scan";
+@import "sections/tool";
+@import "sections/qr-code";
+@import "sections/generate";
+@import "sections/order";
+@import "sections/greeting-form";
