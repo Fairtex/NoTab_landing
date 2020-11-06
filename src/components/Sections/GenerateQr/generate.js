@@ -1,21 +1,18 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import Arrow from "../../../assets/images/noTab-arrow.svg";
+import Arrow from "../../../assets/images/noTab-arrow.svg"
 
-const GenerateQR = ({content}) => {
-
+const GenerateQR = ({ content }) => {
   return (
     <section className="generate-qr">
       <div className="container">
         <div className="generate-qr__inner">
           <div className="generate-qr__img-wrap">
-            <Img fluid={content.generateQrImage.fluid}/>
+            <Img fluid={content.generateQrImage.fluid} />
             <div className="generate-qr__pointer-wrap">
               <Arrow />
-              <span className="generate-qr__pointer-text">
-                Scan QR-code
-              </span>
+              <span className="generate-qr__pointer-text">Scan QR-code</span>
             </div>
           </div>
           <div className="generate-qr__info">
@@ -24,7 +21,7 @@ const GenerateQR = ({content}) => {
             </h2>
             <p className="generate-qr__text text">
               {content.generateQrText.generateQrText}
-            </p>  
+            </p>
           </div>
         </div>
       </div>
@@ -32,4 +29,4 @@ const GenerateQR = ({content}) => {
   )
 }
 
-export default GenerateQR;
+export default GenerateQR

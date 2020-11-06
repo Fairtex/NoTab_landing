@@ -1,0 +1,24 @@
+$block: '.ui-button';
+
+#{$block} {
+  background: $background;
+  border: 1px solid $borderColor;
+  color: $fontColor;
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-width: 120px;
+  height: 50px;
+
+  &__text {
+    font-family: $fontTitle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

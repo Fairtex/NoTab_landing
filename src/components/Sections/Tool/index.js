@@ -1,3 +1,3 @@
-import Tool from './tool';
+import Tool from "./tool"
 
-export default Tool;
+export default Tool

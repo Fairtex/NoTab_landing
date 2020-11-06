@@ -1,0 +1,19 @@
+$block: '.ui-textArea';
+
+#{$block} {
+  background: $fontColor;
+  border: 1px solid $borderColor;
+  color: $background;
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-height: 106px;
+  resize: none;
+  width: 100%;
+  padding-left: 23px;
+  padding-top: 10px;
+
+  &__container {
+    max-width: 818px;
+    width: 100%;
+  }
+}

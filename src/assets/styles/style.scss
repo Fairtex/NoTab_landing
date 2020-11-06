@@ -6,6 +6,10 @@
 @import "common/variables";
 @import "common/reset";
 @import "common/main";
+//ui
+@import "uiButton";
+@import "uiTextArea";
+@import "uiTextInput";
 //sections
 @import "sections/header";
 @import "sections/hero";

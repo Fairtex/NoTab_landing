@@ -1,3 +1,3 @@
-import VideoBlock from './video-block';
+import VideoBlock from "./video-block"
 
-export default VideoBlock;
+export default VideoBlock

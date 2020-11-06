@@ -1,8 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const OrderInterface = ({content}) => {
-
+const OrderInterface = ({ content }) => {
   return (
     <section className="order">
       <div className="container">
@@ -16,7 +15,7 @@ const OrderInterface = ({content}) => {
             </p>
           </div>
           <div className="order__img-wrap">
-            <Img fluid={content.orderInterfaceImage.fluid}/>
+            <Img fluid={content.orderInterfaceImage.fluid} />
           </div>
         </div>
       </div>
@@ -24,4 +23,4 @@ const OrderInterface = ({content}) => {
   )
 }
 
-export default OrderInterface;
+export default OrderInterface
