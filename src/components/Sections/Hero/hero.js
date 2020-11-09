@@ -10,10 +10,8 @@ const Hero = ({ content }) => {
         <div className="hero__inner">
           <div className="hero__row">
             <div className="hero__info">
-              <h2 className="hero__title">
-                {content.heroTitle}
-              </h2>
-              <p className="hero__info-text">
+              <h2 className="hero__title title">{content.heroTitle}</h2>
+              <p className="main-header__info-text text">
                 {content.heroText.heroText}
               </p>
             </div>

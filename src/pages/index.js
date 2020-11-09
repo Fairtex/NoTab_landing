@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
+import { FormspreeProvider } from "@formspree/react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,8 +20,8 @@ import { GreetingForm } from "../components/Sections/GreetingForm"
 import "../assets/styles/style.scss"
 
 const IndexPage = () => {
-  const { 
-    heroContent, 
+  const {
+    heroContent,
     partnersContent,
     animationContent,
     scanContent,
@@ -32,7 +33,9 @@ const IndexPage = () => {
     formContent,
   } = useStaticQuery(graphql`
     {
-      heroContent: contentfulHeroContent(id: {eq: "4c528c92-efda-5222-bd23-3fcb0f2dbfd0"}) {
+      heroContent: contentfulHeroContent(
+        id: { eq: "4c528c92-efda-5222-bd23-3fcb0f2dbfd0" }
+      ) {
         heroImage {
           fluid(quality: 100, maxHeight: 668, maxWidth: 333) {
             ...GatsbyContentfulFluid
@@ -44,7 +47,9 @@ const IndexPage = () => {
           heroText
         }
       }
-      partnersContent: contentfulContactContent(id: {eq: "7501835e-a1f0-50b8-8444-c9c7c0fcc014"}) {
+      partnersContent: contentfulContactContent(
+        id: { eq: "7501835e-a1f0-50b8-8444-c9c7c0fcc014" }
+      ) {
         contactMail
         contactText {
           contactText
@@ -55,13 +60,17 @@ const IndexPage = () => {
         }
         partnerLink
       }
-      animationContent: contentfulAnimationSectionContent(id: {eq: "45a72972-158f-51aa-ae17-e0f0b0548a7a"}) {
+      animationContent: contentfulAnimationSectionContent(
+        id: { eq: "45a72972-158f-51aa-ae17-e0f0b0548a7a" }
+      ) {
         animationBlockTitle
         animationBlockText {
           animationBlockText
         }
       }
-      scanContent: contentfulIdBlockContent(id: {eq: "fc887afd-3e68-52a6-984d-a42eb61c0261"}) {
+      scanContent: contentfulIdBlockContent(
+        id: { eq: "fc887afd-3e68-52a6-984d-a42eb61c0261" }
+      ) {
         idBlockTitle
         idBlockText {
           idBlockText
@@ -79,13 +88,17 @@ const IndexPage = () => {
           }
         }
       }
-      toolContent: contentfulBiToolContent(id: {eq: "226f1a92-4089-5ec9-8f42-eec0947a5020"}) {
+      toolContent: contentfulBiToolContent(
+        id: { eq: "226f1a92-4089-5ec9-8f42-eec0947a5020" }
+      ) {
         biToolTitle
         biToolText {
           biToolText
         }
       }
-      qrCodeContent: contentfulQrCodeContent(id: {eq: "e9d39e98-2ee8-53a7-98b9-9a966f9d2ca8"}) {
+      qrCodeContent: contentfulQrCodeContent(
+        id: { eq: "e9d39e98-2ee8-53a7-98b9-9a966f9d2ca8" }
+      ) {
         qrCodeTitle
         qrCodeText {
           qrCodeText
@@ -103,7 +116,9 @@ const IndexPage = () => {
           }
         }
       }
-      generateQrCode: contentfulGenerateQrContent(id: {eq: "84bb34d7-052c-5216-b40b-25101c83d2fe"}) {
+      generateQrCode: contentfulGenerateQrContent(
+        id: { eq: "84bb34d7-052c-5216-b40b-25101c83d2fe" }
+      ) {
         generateQrTitle
         generateQrText {
           generateQrText
@@ -115,7 +130,9 @@ const IndexPage = () => {
           }
         }
       }
-      orderContent: contentfulOrderInterfaceBlock(id: {eq: "f98bf6b3-0ed2-534f-8cf1-84c1c96e854b"}) {
+      orderContent: contentfulOrderInterfaceBlock(
+        id: { eq: "f98bf6b3-0ed2-534f-8cf1-84c1c96e854b" }
+      ) {
         orderInterfaceTitle
         orderInterfaceText {
           orderInterfaceText
@@ -127,14 +144,18 @@ const IndexPage = () => {
           }
         }
       }
-      videoContent: contentfulVideoBlock(id: {eq: "f2979445-fcdd-5ffe-a045-85bacc6c918e"}) {
+      videoContent: contentfulVideoBlock(
+        id: { eq: "f2979445-fcdd-5ffe-a045-85bacc6c918e" }
+      ) {
         videoBlockVideo {
           file {
             url
           }
         }
       }
-      formContent: contentfulFormContent(id: {eq: "9e863c47-772d-5a91-a08b-939e24da7829"}) {
+      formContent: contentfulFormContent(
+        id: { eq: "9e863c47-772d-5a91-a08b-939e24da7829" }
+      ) {
         formTitle
         formText {
           formText
@@ -142,25 +163,27 @@ const IndexPage = () => {
         formButtonText
       }
     }
-  `);
+  `)
 
   return (
-    <Layout>
-      <SEO title="Home" />
-      <Hero content={ heroContent } />
-      <Partners content={ partnersContent } />
-      <Animation content={ animationContent } />
-      <CookieBar />
-      <IdScanner content={ scanContent } />
-      <Tool content={ toolContent } />
-      <QrCode content={ qrCodeContent }/>
-      <GenerateQR content={ generateQrCode }/>
-      <OrderInterface content={ orderContent }/>
-      <VideoBlock content={ videoContent } />
-      <GreetingForm content={ formContent }/>
-      {/* <Link to="/page-2/">Go to page 2</Link> <br />
+    <FormspreeProvider project="1541005978974027495">
+      <Layout>
+        <SEO title="Home" />
+        <Hero content={heroContent} />
+        <Partners content={partnersContent} />
+        <Animation content={animationContent} />
+        <CookieBar />
+        <IdScanner content={scanContent} />
+        <Tool content={toolContent} />
+        <QrCode content={qrCodeContent} />
+        <GenerateQR content={generateQrCode} />
+        <OrderInterface content={orderContent} />
+        <VideoBlock content={videoContent} />
+        <GreetingForm content={formContent} />
+        {/* <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
-    </Layout>
+      </Layout>
+    </FormspreeProvider>
   )
 }
 

@@ -1,3 +1,3 @@
-import GenerateQR from './generate';
+import GenerateQR from "./generate"
 
-export default GenerateQR;
+export default GenerateQR

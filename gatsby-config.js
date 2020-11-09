@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV === "development") {
-  require("dotenv").config();
+  require("dotenv").config()
 }
-const path = require('path');
+const path = require("path")
 
 module.exports = {
   siteMetadata: {
@@ -47,11 +47,9 @@ module.exports = {
         aliases: {
           styles: `src/assets/styles`,
           config: `config/`,
-          '@components': 'src/components/',
-          '@pages': 'src/pages/',
-          '@layouts': 'src/layouts/',
-          '@assets': 'src/assets/',
-          '@static': 'static',
+          "@components": "src/components/",
+          "@pages": "src/pages/",
+          "@assets": "src/assets/",
         },
       },
     },

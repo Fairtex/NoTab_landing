@@ -1,3 +1,3 @@
-import QrCode from './qr-code';
+import QrCode from "./qr-code"
 
-export default QrCode;
+export default QrCode

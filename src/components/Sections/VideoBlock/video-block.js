@@ -1,8 +1,7 @@
 import React from "react"
 import telFrame from "../../../assets/images/noTab-video-frame.png"
 
-const VideoBlock = ({content}) => {
-
+const VideoBlock = ({ content }) => {
   return (
     <section className="video-block">
       <div className="container">
@@ -28,4 +27,4 @@ const VideoBlock = ({content}) => {
   )
 }
 
-export default VideoBlock;
+export default VideoBlock

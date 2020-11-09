@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import BackgroundImage from 'gatsby-background-image';
+import BackgroundImage from "gatsby-background-image"
 
 const IdScanner = ({ content }) => {
   // const sources = [
@@ -28,15 +28,11 @@ const IdScanner = ({ content }) => {
       <div className="container">
         <div className="scan__inner">
           <div className="scan__img-wrap">
-            <Img fluid={content.idBlockImage.fluid}/>
+            <Img fluid={content.idBlockImage.fluid} />
           </div>
           <div className="scan__info">
-            <h2 className="scan__title title">
-              {content.idBlockTitle}
-            </h2>
-            <p className="scan__text text">
-              {content.idBlockText.idBlockText}
-            </p>
+            <h2 className="scan__title title">{content.idBlockTitle}</h2>
+            <p className="scan__text text">{content.idBlockText.idBlockText}</p>
           </div>
         </div>
       </div>
@@ -44,4 +40,4 @@ const IdScanner = ({ content }) => {
   )
 }
 
-export default IdScanner;
+export default IdScanner

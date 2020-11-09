@@ -1,35 +1,19 @@
-import React from 'react'
-import classNames from 'classnames'
+import React from "react"
+import classNames from "classnames"
 
 function UITextArea(
-  {
-    onBlur,
-    onFocus,
-    onChange,
-    value,
-    error,
-    placeholder,
-    height = 110,
-    maxLength,
-    disabled = false,
-    className,
-  },
-  ref,
+  { error, maxLength, height = 110, disabled = false, className, ...rest },
+  ref
 ) {
   return (
     <textarea
-      className={classNames('ui-textArea', className, {
-        'ui-textArea--error': error,
+      className={classNames("ui-textArea", className, {
+        "ui-textArea--error": error,
       })}
       ref={ref}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      onBlur={onBlur}
-      onFocus={onFocus}
       style={{ height: height }}
-      maxLength={maxLength && maxLength}
       disabled={disabled}
+      {...rest}
     />
   )
 }

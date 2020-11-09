@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import CompanyName from "../../../assets/images/noTab-header-logo-name.svg"
@@ -16,21 +16,19 @@ const Header = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <header className="header">
       <div className="container">
         <div className="header__inner">
           <div className="header__logo-wrap">
-            <Img fixed={logoImg.childImageSharp.fixed} className="header__logo-img"/>
+            <Img fixed={logoImg.childImageSharp.fixed} />
             <CompanyName />
           </div>
           <a href="#" className="header__link">
-            <LoginIcon className="header__link-logo"/>
-            <span className="header__link-text">
-              Login
-            </span>
+            <LoginIcon />
+            <span className="header__link-text">Login</span>
           </a>
         </div>
       </div>

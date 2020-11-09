@@ -1,9 +1,8 @@
 import React from "react"
 
-import ToolScheme from '../../../assets/images/noTab-tool-scheme.svg';
+import ToolScheme from "../../../assets/images/noTab-tool-scheme.svg"
 
 const Tool = ({ content }) => {
-
   return (
     <section className="tool">
       <div className="container">
@@ -21,4 +20,4 @@ const Tool = ({ content }) => {
   )
 }
 
-export default Tool;
+export default Tool

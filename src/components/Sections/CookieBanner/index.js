@@ -1,3 +1,3 @@
-import CookieBar from './cookieBanner';
+import CookieBar from "./cookieBanner"
 
-export default CookieBar;
+export default CookieBar

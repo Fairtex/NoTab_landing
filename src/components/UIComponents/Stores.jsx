@@ -1,5 +1,4 @@
 import React from "react"
-
 import AppStore from '../../assets/images/noTab-appstore.svg';
 import GooglePlay from '../../assets/images/noTab-googlePlay.svg';
 
@@ -16,4 +15,4 @@ const Stores = ({className}) => {
   )
 }
 
-export default Stores;
+export default Stores

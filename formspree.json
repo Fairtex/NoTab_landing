@@ -1,0 +1,16 @@
+{
+  "forms": {
+    "greetingForm": {
+      "name": "Greeting Form",
+      "actions": [{ "type": "email", "to": "maxim.kravcov@purrweb.com" }],
+      "fields": {
+        "name": { "required": true, "type": "text" },
+        "email": { "required": true, "type": "email" },
+        "venue_name": { "required": false, "type": "text" },
+        "venue_city": { "required": false, "type": "text" },
+        "state_name": { "required": false, "type": "text" },
+        "message": { "required": false, "type": "text" }
+      }
+    }
+  }
+}
