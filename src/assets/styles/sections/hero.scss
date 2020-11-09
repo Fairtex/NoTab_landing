@@ -13,7 +13,6 @@ $block: '.hero';
     
     &--space {
       align-items: center;
-      justify-content: space-between;
       margin: 0;
     }
   }
@@ -75,5 +74,12 @@ $block: '.hero';
     top: -35%;
     right: -100%;
     filter: blur(55px);
+  }
+
+  &__download-text {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 70px;
+    margin-right: 31.3%;
   }
 }

@@ -1,0 +1,28 @@
+$block: '.stores';
+#{$block} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 376px;
+
+  &.stores-big {
+    max-width: 610px;
+
+    #{$block}__vector {
+      &--appStore {
+        width: 259px;
+        height: 82px;
+      }
+      &--googlePlay {
+        width: 292px;
+        height: 82px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+  }
+}
