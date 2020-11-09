@@ -7,12 +7,14 @@ const Tool = ({ content }) => {
     <section className="tool">
       <div className="container">
         <div className="tool__inner">
-          <div className="tool__info">
-            <h2 className="tool__title title">{content.biToolTitle}</h2>
-            <p className="tool__text text">{content.biToolText.biToolText}</p>
-          </div>
-          <div className="tool__img-wrap">
-            <ToolScheme />
+          <div className="tool__row">
+            <div className="tool__info">
+              <h2 className="tool__title title">{content.biToolTitle}</h2>
+              <p className="tool__text text">{content.biToolText.biToolText}</p>
+            </div>
+            <div className="tool__img-wrap">
+              <ToolScheme />
+            </div>
           </div>
         </div>
       </div>

@@ -1,19 +1,20 @@
 import React, { useRef, useMemo } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { useRefScrollProgress, useRect } from "../../../hooks"
 
 const Animation = ({ content }) => {
-  const refInner = useRef()
+  const refRow = useRef()
   const refContainer = useRef()
   const { scrollYProgress } = useViewportScroll()
-  const { start, end } = useRefScrollProgress(refInner)
+  const { start, end } = useRefScrollProgress(refRow)
   const rectContainer = useRect(refContainer)
 
+  console.log(start, end)
+
   const stepSize = useMemo(() => {
-    return (end - start) / 15
+    return (end - start) / 11
   }, [start, end])
 
   const xPosInner = useTransform(
@@ -193,15 +194,6 @@ const Animation = ({ content }) => {
             }
           }
         }
-        iphoneGradient: file(
-          relativePath: { eq: "animation-iphone-gradient.png" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 895, maxHeight: 1105, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         overlayImage1: file(
           relativePath: { eq: "animation-overlay-image1.png" }
         ) {
@@ -290,25 +282,29 @@ const Animation = ({ content }) => {
   return (
     <section className="animation">
       <div className="container">
-        <motion.div
+        <div
           className="animation__inner"
-          ref={refInner}
+          ref={refRow}
           style={{
             x: xPosInner,
           }}
         >
-          <div className="animation__container" ref={refContainer}>
-            <motion.div
-              className="animation__gadget"
-              style={{
-                rotate: degIphone,
-                scale: scaleIphone,
-                transformOrigin: "center center",
-              }}
-            >
-              <BackgroundImage
-                fluid={data.iphoneGradient.childImageSharp.fluid}
-                className={"animation__gadget-background"}
+          <motion.div
+            className="animation__row"
+            ref={refRow}
+            style={{
+              x: xPosInner,
+            }}
+          >
+
+            <div className="animation__gadget-container" ref={refContainer}>
+              <motion.div
+                className="animation__gadget"
+                style={{
+                  rotate: degIphone,
+                  scale: scaleIphone,
+                  transformOrigin: "center center",
+                }}
               >
                 <Img
                   className="animation__gadget-iphone-image"
@@ -429,23 +425,23 @@ const Animation = ({ content }) => {
                 >
                   <Img fluid={data.image9.childImageSharp.fluid} />
                 </motion.div>
-              </BackgroundImage>
-            </motion.div>
-          </div>
-          <motion.div
-            className="animation__container"
-            style={{ opacity: opacityText }}
-          >
-            <div className="animation__info">
-              <h2 className="animation__title title">
-                {content.animationBlockTitle}
-              </h2>
-              <p className="animation__info-text text">
-                {content.animationBlockText.animationBlockText}
-              </p>
+              </motion.div>
             </div>
+            <motion.div
+              className="animation__info-container"
+              style={{ opacity: opacityText }}
+            >
+              <div className="animation__info">
+                <h2 className="animation__title title">
+                  {content.animationBlockTitle}
+                </h2>
+                <p className="animation__info-text text">
+                  {content.animationBlockText.animationBlockText}
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -11,13 +11,13 @@ const Hero = ({ content }) => {
           <div className="hero__row">
             <div className="hero__info">
               <h2 className="hero__title title">{content.heroTitle}</h2>
-              <p className="main-header__info-text text">
+              <p className="hero__info-text text">
                 {content.heroText.heroText}
               </p>
             </div>
             <div className="hero__img-wrap">
-              <Ellipse className="hero__blur-ellipse"/>
-              <Img fluid={content.heroImage.fluid} className="hero__img"/>
+              <Ellipse className="hero__blur-ellipse" />
+              <Img fluid={content.heroImage.fluid} className="hero__img" />
             </div>
           </div>
           <div className="hero__row hero__row--space">

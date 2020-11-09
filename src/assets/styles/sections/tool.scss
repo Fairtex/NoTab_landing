@@ -2,5 +2,55 @@ $block: '.tool';
 #{$block} {
   background: $background;
 
-  
+  &__inner {
+    padding: 0 7% 90px;
+    position: relative;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 0 75px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 51px;
+    line-height: 62px;
+    margin: 0 0 23px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__info {
+    padding: 8% 0 0;
+    flex: 0 0 40.6%;
+    margin-right: 2.4%;
+  }
+
+  &__img-wrap {
+    position: relative;
+    flex: 0 0 56%;
+    svg {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 855px) {
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__info {
+      flex: 0 0 100%;
+      margin-right: 2.4%;
+      margin-bottom: 2%;
+    }
+
+    &__img-wrap {
+      flex: 0 0 100%;
+    }
+  }
 }
