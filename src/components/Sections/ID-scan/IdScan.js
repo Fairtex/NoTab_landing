@@ -3,6 +3,21 @@ import Img from "gatsby-image"
 import BackgroundImage from 'gatsby-background-image';
 
 const IdScanner = ({ content }) => {
+  // const sources = [
+  //   content.headerLargeDesktopBg.fluid,
+  //   {
+  //     ...content.headerDesktopBg.fluid,
+  //     media: `(max-width: 1700px)`,
+  //   },
+  //   {
+  //     ...content.headerTabletbg.fluid,
+  //     media: `(max-width: 1024px)`,
+  //   },
+  //   {
+  //     ...content.headerMobileBg.fluid,
+  //     media: `(max-width: 550px)`,
+  //   },
+  // ];
   return (
     <BackgroundImage
       Tag="section"
