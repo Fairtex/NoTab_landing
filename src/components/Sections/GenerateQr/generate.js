@@ -11,8 +11,8 @@ const GenerateQR = ({ content }) => {
           <div className="generate-qr__img-wrap">
             <Img fluid={content.generateQrImage.fluid} />
             <div className="generate-qr__pointer-wrap">
-              <Arrow />
-              <span className="generate-qr__pointer-text">Scan QR-code</span>
+              <Arrow className="generate-qr__pointer-arrow" />
+              <p className="generate-qr__pointer-text">Scan QR-code</p>
             </div>
           </div>
           <div className="generate-qr__info">

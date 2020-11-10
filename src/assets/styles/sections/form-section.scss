@@ -1,6 +1,7 @@
 $block: '.form-section';
 #{$block} {
   background: $background;
+  overflow: hidden;
 
   &__form {
     position: relative;

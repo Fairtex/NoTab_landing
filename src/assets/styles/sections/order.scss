@@ -2,5 +2,35 @@ $block: '.order';
 #{$block} {
   background: $background;
 
-  
+  &__inner {
+    padding: 0 6% 90px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    margin-left: auto;
+    max-width: 425px;
+    width: 100%;
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 51px;
+    line-height: 62px;
+    margin-bottom: 23px;
+  }
+
+  &__img {
+    &-wrap {
+      padding: 0px 14% 0;
+    }
+  }
 }

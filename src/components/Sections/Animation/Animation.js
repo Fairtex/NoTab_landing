@@ -8,10 +8,14 @@ const Animation = ({ content }) => {
   const refRow = useRef()
   const refContainer = useRef()
   const { scrollYProgress } = useViewportScroll()
-  const { start, end } = useRefScrollProgress(refRow)
+  const { start: s, end: e } = useRefScrollProgress(refRow)
   const rectContainer = useRect(refContainer)
 
-  console.log(start, end)
+  const start = useMemo(() => s - 0.02, s)
+  const end = useMemo(() => e - 0.1, e)
+
+
+  console.log(s, e, start, scrollYProgress, end)
 
   const stepSize = useMemo(() => {
     return (end - start) / 11
