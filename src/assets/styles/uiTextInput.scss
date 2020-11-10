@@ -14,4 +14,12 @@ $block: '.ui-textInput';
     max-width: 818px;
     width: 100%;
   }
+
+  &--error {
+    border: 2px solid $errorColor;
+  }
+  
+  &::placeholder {
+    color: $placeholderColor;
+  }
 }

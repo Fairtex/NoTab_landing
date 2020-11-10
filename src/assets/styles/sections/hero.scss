@@ -10,7 +10,7 @@ $block: '.hero';
   &__row {
     display: flex;
     margin: 0 0 75px;
-    
+
     &--space {
       align-items: center;
       margin: 0;
@@ -81,5 +81,18 @@ $block: '.hero';
     font-size: 35px;
     line-height: 70px;
     margin-right: 31.3%;
+  }
+
+  @media (max-width: $laptop) {
+    &__row {
+      &--space {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &__download-text {
+      text-align: center;
+      margin: 0;
+    }
   }
 }

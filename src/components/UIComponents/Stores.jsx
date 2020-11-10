@@ -1,8 +1,8 @@
 import React from "react"
-import AppStore from '../../assets/images/noTab-appstore.svg';
-import GooglePlay from '../../assets/images/noTab-googlePlay.svg';
+import AppStore from "../../assets/images/noTab-appstore.svg"
+import GooglePlay from "../../assets/images/noTab-googlePlay.svg"
 
-const Stores = ({className}) => {
+const Stores = ({ className = "" }) => {
   return (
     <div className={`stores ${className}`}>
       <a href="#" className="stores__link">

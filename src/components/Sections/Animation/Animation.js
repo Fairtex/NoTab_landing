@@ -296,7 +296,6 @@ const Animation = ({ content }) => {
               x: xPosInner,
             }}
           >
-
             <div className="animation__gadget-container" ref={refContainer}>
               <motion.div
                 className="animation__gadget"

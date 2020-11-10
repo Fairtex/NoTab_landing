@@ -35,4 +35,15 @@ $block: '.partners';
     line-height: 33px;
     text-decoration-line: underline;
   }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    padding: 5% 7% 5%;
+    &__item {
+      justify-content: center;
+    }
+    & > :not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }

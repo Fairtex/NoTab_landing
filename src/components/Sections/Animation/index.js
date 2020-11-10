@@ -1,3 +1,3 @@
-import Animation from "./Animation"
+import Animation from "./animation"
 
 export default Animation

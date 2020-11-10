@@ -21,9 +21,7 @@ const Hero = ({ content }) => {
             </div>
           </div>
           <div className="hero__row hero__row--space">
-            <h3 className="hero__download-text">
-              DOWNLOAD OUR APP
-            </h3>
+            <h3 className="hero__download-text">DOWNLOAD OUR APP</h3>
             <Stores />
           </div>
         </div>
