@@ -1,8 +1,7 @@
 $block: '.video-block';
 #{$block} {
-  background: $background url('/noTab-video-background.svg') center;
-  background-size: cover;
-
+  position: relative;
+  background: $background;
 
   &__inner {
     padding: 23.2% 20.6% 17.2%;
@@ -21,5 +20,12 @@ $block: '.video-block';
     }
     &-frame {
     }
+  }
+
+  &__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

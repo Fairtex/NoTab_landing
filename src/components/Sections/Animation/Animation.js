@@ -346,7 +346,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-3"
+                  className="animation__gadget-image animation__gadget-image-2"
                   style={{
                     x: xPosImage2,
                     y: yPosImage2,
@@ -357,7 +357,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-4"
+                  className="animation__gadget-image animation__gadget-image-3"
                   style={{
                     x: xPosImage3,
                     y: yPosImage3,
@@ -367,7 +367,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-5"
+                  className="animation__gadget-image animation__gadget-image-4"
                   style={{
                     x: xPosImage4,
                     y: yPosImage4,
@@ -378,7 +378,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-6"
+                  className="animation__gadget-image animation__gadget-image-5"
                   style={{
                     x: xPosImage5,
                     y: yPosImage5,
@@ -389,7 +389,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-7"
+                  className="animation__gadget-image animation__gadget-image-6"
                   style={{
                     x: xPosImage6,
                     y: yPosImage6,
@@ -399,7 +399,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-8"
+                  className="animation__gadget-image animation__gadget-image-7"
                   style={{
                     x: xPosImage7,
                     y: yPosImage7,
@@ -409,7 +409,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-9"
+                  className="animation__gadget-image animation__gadget-image-8"
                   style={{
                     x: xPosImage8,
                     y: yPosImage8,
@@ -420,7 +420,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-11"
+                  className="animation__gadget-image animation__gadget-image-9"
                   style={{
                     x: xPosImage9,
                     y: yPosImage9,

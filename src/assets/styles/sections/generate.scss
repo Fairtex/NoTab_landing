@@ -1,7 +1,6 @@
 $block: '.generate-qr';
 #{$block} {
-  background: $background url('/noTab-video-background.svg') center;
-  background-size: cover;
+  background: $background;
 
   &__inner {
     padding: 1% 7% 18.5%;
@@ -69,5 +68,12 @@ $block: '.generate-qr';
       line-height: 26px;
       padding-left: 83px;
     }
+  }
+
+  &__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
