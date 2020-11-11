@@ -1,19 +1,24 @@
 import React, { useRef, useMemo } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { useRefScrollProgress, useRect } from "../../../hooks"
 
 const Animation = ({ content }) => {
-  const refInner = useRef()
+  const refRow = useRef()
   const refContainer = useRef()
   const { scrollYProgress } = useViewportScroll()
-  const { start, end } = useRefScrollProgress(refInner)
+  const { start: s, end: e } = useRefScrollProgress(refRow)
   const rectContainer = useRect(refContainer)
 
+  const start = useMemo(() => s - 0.02, s)
+  const end = useMemo(() => e - 0.1, e)
+
+
+  console.log(s, e, start, scrollYProgress, end)
+
   const stepSize = useMemo(() => {
-    return (end - start) / 15
+    return (end - start) / 11
   }, [start, end])
 
   const xPosInner = useTransform(
@@ -193,15 +198,6 @@ const Animation = ({ content }) => {
             }
           }
         }
-        iphoneGradient: file(
-          relativePath: { eq: "animation-iphone-gradient.png" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 895, maxHeight: 1105, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         overlayImage1: file(
           relativePath: { eq: "animation-overlay-image1.png" }
         ) {
@@ -290,25 +286,28 @@ const Animation = ({ content }) => {
   return (
     <section className="animation">
       <div className="container">
-        <motion.div
+        <div
           className="animation__inner"
-          ref={refInner}
+          ref={refRow}
           style={{
             x: xPosInner,
           }}
         >
-          <div className="animation__container" ref={refContainer}>
-            <motion.div
-              className="animation__gadget"
-              style={{
-                rotate: degIphone,
-                scale: scaleIphone,
-                transformOrigin: "center center",
-              }}
-            >
-              <BackgroundImage
-                fluid={data.iphoneGradient.childImageSharp.fluid}
-                className={"animation__gadget-background"}
+          <motion.div
+            className="animation__row"
+            ref={refRow}
+            style={{
+              x: xPosInner,
+            }}
+          >
+            <div className="animation__gadget-container" ref={refContainer}>
+              <motion.div
+                className="animation__gadget"
+                style={{
+                  rotate: degIphone,
+                  scale: scaleIphone,
+                  transformOrigin: "center center",
+                }}
               >
                 <Img
                   className="animation__gadget-iphone-image"
@@ -347,7 +346,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-3"
+                  className="animation__gadget-image animation__gadget-image-2"
                   style={{
                     x: xPosImage2,
                     y: yPosImage2,
@@ -358,7 +357,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-4"
+                  className="animation__gadget-image animation__gadget-image-3"
                   style={{
                     x: xPosImage3,
                     y: yPosImage3,
@@ -368,7 +367,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-5"
+                  className="animation__gadget-image animation__gadget-image-4"
                   style={{
                     x: xPosImage4,
                     y: yPosImage4,
@@ -379,7 +378,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-6"
+                  className="animation__gadget-image animation__gadget-image-5"
                   style={{
                     x: xPosImage5,
                     y: yPosImage5,
@@ -390,7 +389,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-7"
+                  className="animation__gadget-image animation__gadget-image-6"
                   style={{
                     x: xPosImage6,
                     y: yPosImage6,
@@ -400,7 +399,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-8"
+                  className="animation__gadget-image animation__gadget-image-7"
                   style={{
                     x: xPosImage7,
                     y: yPosImage7,
@@ -410,7 +409,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-9"
+                  className="animation__gadget-image animation__gadget-image-8"
                   style={{
                     x: xPosImage8,
                     y: yPosImage8,
@@ -421,7 +420,7 @@ const Animation = ({ content }) => {
                 </motion.div>
 
                 <motion.div
-                  className="animation__gadget-image animation__gadget-image-11"
+                  className="animation__gadget-image animation__gadget-image-9"
                   style={{
                     x: xPosImage9,
                     y: yPosImage9,
@@ -429,23 +428,23 @@ const Animation = ({ content }) => {
                 >
                   <Img fluid={data.image9.childImageSharp.fluid} />
                 </motion.div>
-              </BackgroundImage>
-            </motion.div>
-          </div>
-          <motion.div
-            className="animation__container"
-            style={{ opacity: opacityText }}
-          >
-            <div className="animation__info">
-              <h2 className="animation__title title">
-                {content.animationBlockTitle}
-              </h2>
-              <p className="animation__info-text text">
-                {content.animationBlockText.animationBlockText}
-              </p>
+              </motion.div>
             </div>
+            <motion.div
+              className="animation__info-container"
+              style={{ opacity: opacityText }}
+            >
+              <div className="animation__info">
+                <h2 className="animation__title title">
+                  {content.animationBlockTitle}
+                </h2>
+                <p className="animation__info-text text">
+                  {content.animationBlockText.animationBlockText}
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -13,15 +13,17 @@ const QrCode = ({ content }) => {
     >
       <div className="container">
         <div className="qr-code__inner">
-          <div className="qr-code__info">
-            <h2 className="qr-code__title title">{content.qrCodeTitle}</h2>
-            <p className="qr-code__text text">
-              {content.qrCodeText.qrCodeText}
-            </p>
-            <Stores />
-          </div>
-          <div className="qr-code__img-wrap">
-            <Img fluid={content.qrCodeImage.fluid} />
+          <div className="qr-code__row">
+            <div className="qr-code__info">
+              <h2 className="qr-code__title title">{content.qrCodeTitle}</h2>
+              <p className="qr-code__text text">
+                {content.qrCodeText.qrCodeText}
+              </p>
+              <Stores />
+            </div>
+            <div className="qr-code__img-wrap">
+              <Img fluid={content.qrCodeImage.fluid} />
+            </div>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 
 import Arrow from "../../../assets/images/noTab-arrow.svg"
+import GenerateBg from "../../../assets/images/noTab-generate-qr-background.svg"
 
 const GenerateQR = ({ content }) => {
   return (
@@ -9,10 +10,11 @@ const GenerateQR = ({ content }) => {
       <div className="container">
         <div className="generate-qr__inner">
           <div className="generate-qr__img-wrap">
+            <GenerateBg className="generate-qr__background" />
             <Img fluid={content.generateQrImage.fluid} />
             <div className="generate-qr__pointer-wrap">
-              <Arrow />
-              <span className="generate-qr__pointer-text">Scan QR-code</span>
+              <Arrow className="generate-qr__pointer-arrow" />
+              <p className="generate-qr__pointer-text">Scan QR-code</p>
             </div>
           </div>
           <div className="generate-qr__info">

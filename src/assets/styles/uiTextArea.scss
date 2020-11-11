@@ -10,10 +10,18 @@ $block: '.ui-textArea';
   resize: none;
   width: 100%;
   padding-left: 23px;
-  padding-top: 10px;
+  padding-top: 25px;
 
   &__container {
     max-width: 818px;
     width: 100%;
+  }
+
+  &--error {
+    border: 2px solid $errorColor;
+  }
+
+  &::placeholder {
+    color: $placeholderColor;
   }
 }

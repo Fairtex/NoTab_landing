@@ -6,10 +6,10 @@
       "fields": {
         "name": { "required": true, "type": "text" },
         "email": { "required": true, "type": "email" },
-        "venue_name": { "required": false, "type": "text" },
-        "venue_city": { "required": false, "type": "text" },
-        "state_name": { "required": false, "type": "text" },
-        "message": { "required": false, "type": "text" }
+        "venue_name": { "required": true, "type": "text" },
+        "venue_city": { "required": true, "type": "text" },
+        "state_name": { "required": true, "type": "text" },
+        "message": { "required": true, "type": "text" }
       }
     }
   }

@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
 import { FormspreeProvider } from "@formspree/react"
 
 import Layout from "../components/layout"
@@ -180,8 +179,6 @@ const IndexPage = () => {
         <OrderInterface content={orderContent} />
         <VideoBlock content={videoContent} />
         <GreetingForm content={formContent} />
-        {/* <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
       </Layout>
     </FormspreeProvider>
   )

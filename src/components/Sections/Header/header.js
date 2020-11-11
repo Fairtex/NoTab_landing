@@ -27,7 +27,7 @@ const Header = () => {
             <CompanyName />
           </div>
           <a href="#" className="header__link">
-            <LoginIcon />
+            <LoginIcon className="header__icon" />
             <span className="header__link-text">Login</span>
           </a>
         </div>
