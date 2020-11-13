@@ -10,6 +10,7 @@ const IdScanner = ({ content }) => {
       fluid={content.idBlockBackground.fluid}
       backgroundColor="#000000"
     >
+      <div className="scan__gradient"></div>
       <div className="container">
         <div className="scan__inner">
           <div className="scan__img-wrap">

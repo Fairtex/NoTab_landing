@@ -21,7 +21,7 @@ const Animation = ({ content }) => {
     return (end - start) / 11
   }, [start, end])
 
-  const xPosInner = useTransform(
+  const xPosRow = useTransform(
     scrollYProgress,
     [start, start + stepSize],
     [0, rectContainer.right - rectContainer.left - rectContainer.width / 2]
@@ -288,16 +288,12 @@ const Animation = ({ content }) => {
       <div className="container">
         <div
           className="animation__inner"
-          ref={refRow}
-          style={{
-            x: xPosInner,
-          }}
         >
           <motion.div
             className="animation__row"
             ref={refRow}
             style={{
-              x: xPosInner,
+              x: xPosRow,
             }}
           >
             <div className="animation__gadget-container" ref={refContainer}>
