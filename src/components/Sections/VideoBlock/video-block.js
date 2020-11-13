@@ -6,6 +6,7 @@ const VideoBlock = ({ content }) => {
   return (
     <section className="video-block">
       <VideoBg className="video-block__background" />
+      <div className="video-block__gradient"></div>
       <div className="container">
         <div className="video-block__inner">
           <div className="video-block__video-wrap">

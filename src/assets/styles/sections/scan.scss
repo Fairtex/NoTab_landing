@@ -21,18 +21,30 @@ $block: '.scan';
   }
 
   &__inner {
-    padding: 42% 7% 90px;
+    padding: 24% 7% 25%;
     display: flex;
     align-items: flex-end;
   }
 
   &__img-wrap {
-    padding: 8%;
+    padding: 9% 15% 6% 0;
     width: 100%;
   }
 
   &__info {
     max-width: 316px;
     padding-bottom: 14%;
+    position: relative;
+    right: 6%;
+  }
+
+  &__gradient {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 33% 0;
+    background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);
+    z-index: -1;
   }
 }

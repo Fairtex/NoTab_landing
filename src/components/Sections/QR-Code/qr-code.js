@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { Stores } from "@components/UIComponents"
+import Nightlife from "../../../assets/images/nightlife.svg"
 
 const QrCode = ({ content }) => {
   return (
@@ -11,6 +12,10 @@ const QrCode = ({ content }) => {
       fluid={content.qrCodeBackground.fluid}
       backgroundColor="#000000"
     >
+      <div className="qr-code__gradient"></div>
+      <div className="qr-code__img-text-wrap">
+        <Nightlife className="qr-code__img-text" />
+      </div>
       <div className="container">
         <div className="qr-code__inner">
           <div className="qr-code__row">

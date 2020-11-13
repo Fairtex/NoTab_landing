@@ -4,7 +4,8 @@ $block: '.animation';
   overflow: hidden;
 
   &__inner {
-    height: 1200px;
+    height: 100%;
+    padding: 5% 0 20%;
   }
 
   &__row {
@@ -102,6 +103,20 @@ $block: '.animation';
       position: absolute;
       z-index: -1;
       top: 33%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        background: radial-gradient(62.81% 61.84% at 69.82% 26.13%, rgb(202, 19, 164) 0%, rgb(138, 13, 188) 35.94%, rgb(83, 15, 220) 78.13%, rgb(3, 3, 240) 100%);
+        opacity: 0.1;
+        filter: blur(40px);
+        z-index: 0;
+      }
       &-1 {
         width: 55%;
       }
