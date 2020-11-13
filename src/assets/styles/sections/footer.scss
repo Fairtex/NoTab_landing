@@ -1,7 +1,6 @@
 $block: '.footer';
 #{$block} {
   background: $background;
-  overflow: hidden;
   flex: 0 0 auto;
 
   &__inner {

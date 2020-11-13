@@ -4,7 +4,7 @@ $block: '.qr-code';
 
   &::after, &::before {
     background-size: 100% auto !important;
-    background-repeat-y: no-repeat !important;
+    background-repeat: no-repeat !important;
     background-position: top 0 left 50% !important;
   }
 
@@ -30,6 +30,7 @@ $block: '.qr-code';
     font-size: 18px;
     line-height: 25px;
     max-width: 315px;
+    margin: 0 0 58px;
   }
 
   &__info {
