@@ -23,8 +23,8 @@ const Header = () => {
       <div className="container">
         <div className="header__inner">
           <div className="header__logo-wrap">
-            <Img fixed={logoImg.childImageSharp.fixed} />
-            <CompanyName />
+            <Img fixed={logoImg.childImageSharp.fixed} className="header__logo-img" />
+            <CompanyName className="header__logo-text" />
           </div>
           <a href="#" className="header__link">
             <LoginIcon className="header__icon" />

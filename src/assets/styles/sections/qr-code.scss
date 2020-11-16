@@ -75,4 +75,15 @@ $block: '.qr-code';
     background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);
     z-index: -1;
   }
+
+  @media (max-width: $mobileM) {
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
 }

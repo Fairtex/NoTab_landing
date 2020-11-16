@@ -10,15 +10,17 @@ const Footer = ({ content }) => {
           <div className="footer__row">
             <div className="footer__contact">
               <CompanyName className="footer__logo" />
-              <p className="footer__contact-text text">
-                {"Contact us:" || content.contactText.contactText}
-              </p>
-              <a
-                href={`mailto:${"support@notab.com" || content.contactMail}`}
-                className="footer__contact-address footer__link"
-              >
-                {"support@notab.com" || content.contactMail}
-              </a>
+              <div className="footer__contact-block">
+                <p className="footer__contact-text text">
+                  {"Contact us:" || content.contactText.contactText}
+                </p>
+                <a
+                  href={`mailto:${"support@notab.com" || content.contactMail}`}
+                  className="footer__contact-address footer__link"
+                >
+                  {"support@notab.com" || content.contactMail}
+                </a>
+              </div>
               <p className="footer__copyright-text text">
                 {"© 2020 - NoTab®" || content.copyrightText.copyrightText}
               </p>

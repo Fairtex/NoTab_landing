@@ -79,4 +79,15 @@ $block: '.generate-qr';
     transform: translate(-50%, -50%);
     height: 100%;
   }
+
+  @media (max-width: $mobileM) {
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
 }

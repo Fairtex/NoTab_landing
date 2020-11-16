@@ -20,7 +20,7 @@ const Hero = ({ content }) => {
               <Img fluid={content.heroImage.fluid} className="hero__img" />
             </div>
           </div>
-          <div className="hero__row hero__row--space">
+          <div className="hero__download hero__download--space">
             <h3 className="hero__download-text">DOWNLOAD OUR APP</h3>
             <Stores className="hero__download-stores" />
           </div>

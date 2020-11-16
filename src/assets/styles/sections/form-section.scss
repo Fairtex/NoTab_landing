@@ -130,4 +130,51 @@ $block: '.form-section';
     width: 100%;
     height: 80px;
   }
+
+  @media (max-width: $mobileM) {
+    &__download {
+      &-stores {
+        justify-content: center !important;
+        & > a {
+          max-width: 185px;
+          margin: 0;
+        }
+      }
+    }
+    &__inner {
+      padding: 0 0 2.35%;
+    }
+    &__cities {
+      flex-direction: column;
+      & > div:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    &__input {
+      min-height: 57px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+      white-space: normal;
+    }
+    &__textarea {
+      min-height: 140px;
+    }
+    &__form {
+      &-container {
+        margin-bottom: 74px;
+      }
+      & > div {
+        margin-bottom: 16px;
+      }
+      & > textarea {
+        margin-bottom: 40px;
+      }
+    }
+  }
 }
