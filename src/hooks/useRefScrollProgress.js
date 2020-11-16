@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react"
 
 export default function useRefScrollProgress(ref) {
   const [start, setStart] = useState(null)

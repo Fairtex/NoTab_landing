@@ -5,17 +5,14 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { useRefScrollProgress, useRect } from "../../../hooks"
 
 const Animation = ({ content }) => {
-  const refRow = useRef()
+  const refGadget = useRef()
   const refContainer = useRef()
   const { scrollYProgress } = useViewportScroll()
-  const { start: s, end: e } = useRefScrollProgress(refRow)
-  const rectContainer = useRect(refContainer)
+  const { start: s, end: e } = useRefScrollProgress(refContainer)
+  const rectContainer = useRect(refGadget)
 
-  const start = useMemo(() => s - 0.02, s)
-  const end = useMemo(() => e - 0.1, e)
-
-
-  console.log(s, e, start, scrollYProgress, end)
+  const start = useMemo(() => s - 0.04, s)
+  const end = useMemo(() => e - 0.09, e)
 
   const stepSize = useMemo(() => {
     return (end - start) / 11
@@ -23,23 +20,23 @@ const Animation = ({ content }) => {
 
   const xPosRow = useTransform(
     scrollYProgress,
-    [start, start + stepSize],
-    [0, rectContainer.right - rectContainer.left - rectContainer.width / 2]
+    [start, start + stepSize * 2],
+    [0, (rectContainer.right - rectContainer.left) / 2]
   )
   const degIphone = useTransform(
     scrollYProgress,
-    [start + stepSize, start + stepSize * 2],
+    [start + stepSize * 2, start + stepSize * 3],
     [90, 0]
   )
   const opacityText = useTransform(
     scrollYProgress,
-    [start + stepSize, start + stepSize * 2],
+    [start + stepSize * 2, start + stepSize * 3],
     [1, 0]
   )
   const scaleIphone = useTransform(
     scrollYProgress,
-    [start + stepSize * 2, end],
-    [1.2, 1]
+    [start + stepSize * 4, end],
+    [1.27, 1]
   )
 
   const xPosOverlayImage1 = useTransform(
@@ -285,18 +282,17 @@ const Animation = ({ content }) => {
 
   return (
     <section className="animation">
-      <div className="container">
+      <div className="container" ref={refContainer}>
         <div
           className="animation__inner"
         >
           <motion.div
             className="animation__row"
-            ref={refRow}
             style={{
               x: xPosRow,
             }}
           >
-            <div className="animation__gadget-container" ref={refContainer}>
+            <div className="animation__gadget-container" ref={refGadget}>
               <motion.div
                 className="animation__gadget"
                 style={{

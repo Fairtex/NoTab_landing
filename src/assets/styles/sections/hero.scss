@@ -78,6 +78,7 @@ $block: '.hero';
 
   &__download {
     &-stores {
+      max-width: 376px;
       & > a {
         &:nth-child(1) {
           max-width: 163px;

@@ -37,6 +37,7 @@ $block: '.qr-code';
     padding: 25.6% 0 0 6.5%;
     flex: 0 0 43.4%;
     &-stores {
+      max-width: 376px;
       & > a {
         &:nth-child(1) {
           max-width: 163px;
