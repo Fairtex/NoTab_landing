@@ -15,7 +15,7 @@ const Footer = ({ content }) => {
               </p>
               <a
                 href={`mailto:${"support@notab.com" || content.contactMail}`}
-                className="footer__contact-link footer__link"
+                className="footer__contact-address footer__link"
               >
                 {"support@notab.com" || content.contactMail}
               </a>

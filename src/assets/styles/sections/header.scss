@@ -3,7 +3,7 @@ $block: '.header';
   background: $background;
 
   &__inner {
-    padding: 23px 5.9% 18px;
+    padding: 26px 5.9% 15px;
     display: flex;
     align-items: center;
   }
@@ -12,10 +12,14 @@ $block: '.header';
     display: flex;
     align-items: center;
     margin-right: 108px;
+
+    & > :first-child {
+      margin-right: 7px;
+    }
   }
 
   &__icon {
-    margin-right: 5px;
+    margin-right: 15px;
   }
 
   &__logo-img {

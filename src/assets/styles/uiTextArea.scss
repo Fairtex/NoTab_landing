@@ -6,11 +6,8 @@ $block: '.ui-textArea';
   color: $background;
   box-sizing: border-box;
   border-radius: 10px;
-  min-height: 106px;
   resize: none;
   width: 100%;
-  padding-left: 23px;
-  padding-top: 25px;
 
   &__container {
     max-width: 818px;

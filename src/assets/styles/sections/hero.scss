@@ -3,13 +3,13 @@ $block: '.hero';
   background: $background;
 
   &__inner {
-    padding: 0 7% 90px;
+    padding: 0 7% 5.6%;
     position: relative;
   }
 
   &__row {
     display: flex;
-    margin: 0 0 75px;
+    margin: 0 0 58px;
 
     &--space {
       align-items: center;
@@ -18,7 +18,7 @@ $block: '.hero';
   }
 
   &__info {
-    padding: 10% 0 0;
+    padding: 10.2% 0 0;
     flex: 0 0 51.95%;
     margin-right: 14.5%;
   }
@@ -76,11 +76,23 @@ $block: '.hero';
     filter: blur(55px);
   }
 
-  &__download-text {
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 70px;
-    margin-right: 31.3%;
+  &__download {
+    &-stores {
+      & > a {
+        &:nth-child(1) {
+          max-width: 163px;
+        }
+        &:nth-child(2) {
+          max-width: 184px;
+        }
+      }
+    }
+    &-text {
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 70px;
+      margin-right: 31.3%;
+    }
   }
 
   @media (max-width: $laptop) {
