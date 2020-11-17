@@ -1,21 +1,29 @@
 import React from "react"
 import CookieBanner from 'react-cookie-banner';
 
+const MyCustomCookieBanner = ({ onAccept }) => {
+  return (
+    <div className="cookie-bar">
+      <div className="container">
+        <div className="cookie-bar__inner">
+          <p className="cookie-bar__message">
+            We use cookie to improve your experience on our site. By using our site you consent cookies.
+          </p>
+          <button className="cookie-bar__btn" onClick={onAccept}>
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const CookieBar = () => {
   return (
-    <CookieBanner
-      message="We use cookie to improve your experience on our site. By using our site you consent cookies."
-      onAccept={() => console.log("User has accepted cookies!")}
-      cookie="user-has-accepted-cookies4"
-      styles={{
-        message: {
-          display: 'inline-block',
-          maxWidth: '800px',
-          lineHeight: '20px'
-        }
-      }}
-    />
+    <CookieBanner dismissOnScroll={false} cookie="user-accepted-cookie">
+      {onAccept => <MyCustomCookieBanner onAccept={onAccept} />}
+    </CookieBanner>
   );
 }
 
-export default CookieBar
+export default CookieBar;

@@ -1,3 +1,3 @@
-import IdScanner from "./IdScan"
+import IdScanner from "./idScan"
 
 export default IdScanner

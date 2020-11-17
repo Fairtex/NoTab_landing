@@ -1,0 +1,76 @@
+$block: '.cookie-bar';
+#{$block} {
+  background: $cookieBackground;
+  font-family: $fontText;
+  color: $fontColor;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  opacity: 0;
+  animation-name: openTransition;
+  animation-duration: 1.2s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6% 1.6% 1.7% 7%;
+    position: relative;
+    min-height: 93px;
+  }
+
+  &__message {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 610px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-right: 12%;
+
+    @media (max-width: $tablet) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__btn {
+    font-family: $fontText;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4.7%;
+    min-width: 92px;
+    min-height: 50px;
+    border: 0.5px solid $fontColor;
+    border-radius: 6px;
+    background: none;
+    transition: all 0.35s ease;
+
+    &:hover {
+      background: $fontColor;
+      color: $background;
+    }
+  }
+}
+
+@keyframes openTransition {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

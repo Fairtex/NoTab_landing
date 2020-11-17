@@ -1,1 +1,3 @@
-export { default as GreetingForm } from "./GreetingForm"
+import GreetingForm from "./greetingForm"
+
+export default GreetingForm

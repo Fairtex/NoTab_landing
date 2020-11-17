@@ -14,7 +14,7 @@ import QrCode from "../components/Sections/QR-Code"
 import GenerateQR from "../components/Sections/GenerateQr"
 import OrderInterface from "../components/Sections/Order"
 import VideoBlock from "../components/Sections/VideoBlock"
-import { GreetingForm } from "../components/Sections/GreetingForm"
+import GreetingForm from "../components/Sections/GreetingForm"
 
 import "../assets/styles/style.scss"
 
