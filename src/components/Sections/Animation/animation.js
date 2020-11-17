@@ -283,9 +283,7 @@ const Animation = ({ content }) => {
   return (
     <section className="animation">
       <div className="container" ref={refContainer}>
-        <div
-          className="animation__inner"
-        >
+        <div className="animation__inner">
           <motion.div
             className="animation__row"
             style={{
