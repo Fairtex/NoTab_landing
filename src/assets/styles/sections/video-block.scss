@@ -4,7 +4,7 @@ $block: '.video-block';
   background: $background;
 
   &__inner {
-    padding: 23.2% 20.6% 17.2%;
+    padding: 22.1% 20%;
     display: flex;
     align-items: center;
   }
@@ -24,9 +24,10 @@ $block: '.video-block';
 
   &__background {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    transform: translate(-50%, 0);
   }
 
   &__gradient {
@@ -39,5 +40,9 @@ $block: '.video-block';
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transform: translate(-50%, -50%);
     background: linear-gradient(360deg, #000000 6.8%, rgba(0, 0, 0, 0) 51.62%, #000000 97.38%);
+  }
+  
+  @media (max-width: $mobileM) {
+    display: none;
   }
 }

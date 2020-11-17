@@ -46,4 +46,20 @@ $block: '.partners';
       margin-bottom: 30px;
     }
   }
+
+  @media (max-width: $mobileM) {
+    padding: 5% 4% 5%;
+
+    &__text {
+      font-size: 24px;
+      line-height: 33px;
+    }
+    &__link {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    &__item {
+      padding: 10.9% 8.8% 11.8%;
+    }
+  }
 }

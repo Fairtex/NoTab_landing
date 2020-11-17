@@ -5,11 +5,11 @@ $block: '.qr-code';
   &::after, &::before {
     background-size: 100% auto !important;
     background-repeat: no-repeat !important;
-    background-position: top 0 left 50% !important;
-  }
+    background-position: top 2.9% left 50.5% !important;
+    }
 
   &__inner {
-    padding: 23% 7% 1.5%;
+    padding: 17% 7% 1.5%;
   }
 
   &__row {
@@ -30,17 +30,28 @@ $block: '.qr-code';
     font-size: 18px;
     line-height: 25px;
     max-width: 315px;
-    margin: 0 0 58px;
+    margin: 0 0 33px;
   }
 
   &__info {
-    padding: 32% 0 0;
-    flex: 0 0 41.5%;
+    padding: 25.6% 0 0 6.5%;
+    flex: 0 0 43.4%;
+    &-stores {
+      max-width: 376px;
+      & > a {
+        &:nth-child(1) {
+          max-width: 163px;
+        }
+        &:nth-child(2) {
+          max-width: 184px;
+        }
+      }
+    }
   }
 
   &__img-wrap {
     position: relative;
-    flex: 0 0 60%;
+    flex: 0 0 60.2%;
   }
 
   &__img-text {
@@ -48,10 +59,10 @@ $block: '.qr-code';
     height: 100%;
     &-wrap {
       position: absolute;
-      top: 0;
+      top: 0.6%;
       left: 38.5%;
       width: 100%;
-      padding: 0 45%;
+      padding: 0 44.9%;
     }
   }
 
@@ -60,8 +71,19 @@ $block: '.qr-code';
     position: absolute;
     top: 0;
     left: 0;
-    padding: 23% 0;
+    padding: 24% 0;
     background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);
     z-index: -1;
+  }
+
+  @media (max-width: $mobileM) {
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

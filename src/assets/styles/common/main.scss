@@ -75,6 +75,10 @@ div:focus {
   @media (max-width: $tablet) {
     padding: 0 15px;
   }
+
+  @media (max-width: $mobileM) {
+    padding: 0 15px;
+  }
 }
 
 #___gatsby {

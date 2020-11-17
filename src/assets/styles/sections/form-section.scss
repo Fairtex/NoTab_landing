@@ -7,8 +7,20 @@ $block: '.form-section';
     max-width: 818px;
     width: 100%;
     z-index: 1;
-    & > :not(:last-child) {
+    & > div {
       margin-bottom: 23px;
+    }
+    & > textarea {
+      margin-bottom: 58px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      margin-bottom: 7.3%;
+      width: 100%;
     }
 
     &::before {
@@ -53,12 +65,23 @@ $block: '.form-section';
   }
 
   &__text {
-    margin-bottom: 82px;
+    margin-bottom: 81px;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
     white-space: pre-wrap;
+  }
+
+  &__input {
+    min-height: 83px;
+    text-indent: 20px;
+  }
+
+  &__textarea {
+    min-height: 199px;
+    padding-left: 22px;
+    padding-top: 29px;
   }
 
   &__inner {
@@ -67,8 +90,9 @@ $block: '.form-section';
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 80px 6% 6.4%;
+    padding: 0 6% 2.35%;
     position: relative;
+    margin-top: -4.6%;
   }
 
   &__cities {
@@ -79,9 +103,78 @@ $block: '.form-section';
     }
   }
 
+  &__download {
+    &-text {
+      font-family: $fontText;
+      font-weight: bold;
+      font-size: 23px;
+      line-height: 33px;
+      letter-spacing: 0.06em;
+      margin-bottom: 24px;
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    &-stores {
+      width: 100%;
+      max-width: 610px;
+    }
+  }
+
   &__button {
     max-width: 398px;
     width: 100%;
     height: 80px;
+  }
+
+  @media (max-width: $mobileM) {
+    &__download {
+      &-stores {
+        justify-content: center !important;
+        & > a {
+          max-width: 185px;
+          margin: 0;
+        }
+      }
+    }
+    &__inner {
+      padding: 0 0 2.35%;
+    }
+    &__cities {
+      flex-direction: column;
+      & > div:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    &__input {
+      min-height: 57px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+      white-space: normal;
+    }
+    &__textarea {
+      min-height: 140px;
+    }
+    &__form {
+      &-container {
+        margin-bottom: 74px;
+      }
+      & > div {
+        margin-bottom: 16px;
+      }
+      & > textarea {
+        margin-bottom: 40px;
+      }
+    }
   }
 }

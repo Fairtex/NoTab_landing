@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { Stores } from "@components/UIComponents"
-import Nightlife from "../../../assets/images/nightlife.svg"
+import Nightlife from "../../../assets/images/noTab-nightlife.svg"
 
 const QrCode = ({ content }) => {
   return (
@@ -24,7 +24,7 @@ const QrCode = ({ content }) => {
               <p className="qr-code__text text">
                 {content.qrCodeText.qrCodeText}
               </p>
-              <Stores />
+              <Stores className="qr-code__info-stores" />
             </div>
             <div className="qr-code__img-wrap">
               <Img fluid={content.qrCodeImage.fluid} />

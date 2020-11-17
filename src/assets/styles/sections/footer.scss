@@ -4,7 +4,7 @@ $block: '.footer';
   flex: 0 0 auto;
 
   &__inner {
-    padding: 7.5% 6% 90px;
+    padding: 7.4% 6.9% 90px;
     position: relative;
   }
 
@@ -16,6 +16,7 @@ $block: '.footer';
 
   &__logo {
     margin-bottom: 16px;
+    margin-top: 4px;
   }
 
   &__link {
@@ -30,9 +31,13 @@ $block: '.footer';
       font-style: normal;
       font-size: 18px;
       line-height: 25px;
+      margin-bottom: 3px;
     }
-    &-link {
-      margin-bottom: 19px;
+    &-address {
+      font-size: 16.7px;
+    }
+    &-block {
+      margin-bottom: 25px;
     }
     
     &::before {
@@ -69,6 +74,29 @@ $block: '.footer';
     }
     & > :not(:last-child) {
       margin-bottom: 25px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &__row {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    &__attachment {
+      align-self: auto;
+      margin-bottom: 58px;
+    }
+    &__contact {
+      align-items: center;
+      &-block {
+        display: flex;
+        align-items: center;
+      }
+      &-text {
+        margin-bottom: 0;
+        margin-right: 4px;
+      }
     }
   }
 }

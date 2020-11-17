@@ -3,13 +3,14 @@ $block: '.hero';
   background: $background;
 
   &__inner {
-    padding: 0 7% 90px;
+    padding: 0 7% 5.6%;
     position: relative;
   }
 
   &__row {
     display: flex;
-    margin: 0 0 75px;
+    position: relative;
+    margin: 0 0 58px;
 
     &--space {
       align-items: center;
@@ -17,8 +18,18 @@ $block: '.hero';
     }
   }
 
+  &__download {
+    display: flex;
+    position: relative;
+    margin: 0 0 58px;
+    &--space {
+      align-items: center;
+      margin: 0;
+    }
+  }
+
   &__info {
-    padding: 10% 0 0;
+    padding: 10.2% 0 0;
     flex: 0 0 51.95%;
     margin-right: 14.5%;
   }
@@ -76,23 +87,99 @@ $block: '.hero';
     filter: blur(55px);
   }
 
-  &__download-text {
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 70px;
-    margin-right: 31.3%;
+  &__download {
+    &-stores {
+      max-width: 376px;
+      & > a {
+        &:nth-child(1) {
+          max-width: 163px;
+        }
+        &:nth-child(2) {
+          max-width: 184px;
+        }
+      }
+    }
+    &-text {
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 70px;
+      margin-right: 31.3%;
+    }
   }
 
-  @media (max-width: $laptop) {
-    &__row {
+  @media (max-width: $tablet) {
+    &__download {
       &--space {
         flex-direction: column;
         justify-content: center;
       }
+      &-text {
+        text-align: center;
+        margin: 0;
+      }
     }
-    &__download-text {
-      text-align: center;
-      margin: 0;
+  }
+
+  @media (max-width: $mobileM) {
+    &__title {
+      font-size: 35px;
+      line-height: 40px;
+      margin: 0 0 25px;
+    }
+
+    &__inner {
+      padding: 0;
+    }
+
+    &__row {
+      margin: 0 0 113px;
+    }
+
+    &__img {
+      &-wrap {
+        position: absolute;
+        flex: 0;
+        top: 19%;
+        right: 0px;
+        left: 78%;
+        height: 100%;
+        width: 100%;
+        max-width: 161px;
+        height: 100%;
+      }
+    }
+
+    &__info {
+      padding: 29.2% 0 0;
+      flex: 1;
+      &-text {
+        font-size: 16px;
+        line-height: 22px;
+        padding-left: 0;
+        max-width: 240px;
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__download {
+      margin: 0 0 31px;
+      &-text {
+        font-size: 24px;
+        line-height: 29px;
+      }
+      &-stores {
+        justify-content: center !important;
+        & > a {
+          &:nth-child(1), &:nth-child(2) {
+            max-width: 185px;
+          }
+        }
+      }
     }
   }
 }

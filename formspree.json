@@ -9,6 +9,7 @@
         "venue_name": { "required": true, "type": "text" },
         "venue_city": { "required": true, "type": "text" },
         "state_name": { "required": true, "type": "text" },
+        "subject": { "required": true, "type": "text" },
         "message": { "required": true, "type": "text" }
       }
     }
