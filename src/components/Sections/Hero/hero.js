@@ -17,7 +17,10 @@ const Hero = ({ content }) => {
             </div>
             <div className="hero__img-wrap">
               <Ellipse className="hero__blur-ellipse" />
-              <Img fluid={content.heroImage.fluid} className="hero__img" />
+              <Img 
+                fluid={content.heroImage.fluid} 
+                loading="eager"
+                className="hero__img" />
             </div>
           </div>
           <div className="hero__download hero__download--space">
