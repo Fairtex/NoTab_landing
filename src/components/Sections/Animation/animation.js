@@ -11,8 +11,8 @@ const Animation = ({ content }) => {
   const { start: s, end: e } = useRefScrollProgress(refContainer)
   const rectContainer = useRect(refGadget)
 
-  const start = useMemo(() => s - 0.04, s)
-  const end = useMemo(() => e - 0.09, e)
+  const start = useMemo(() => s - 0.04, [s])
+  const end = useMemo(() => e - 0.09, [e])
 
   const stepSize = useMemo(() => {
     return (end - start) / 11
@@ -283,9 +283,7 @@ const Animation = ({ content }) => {
   return (
     <section className="animation">
       <div className="container" ref={refContainer}>
-        <div
-          className="animation__inner"
-        >
+        <div className="animation__inner">
           <motion.div
             className="animation__row"
             style={{

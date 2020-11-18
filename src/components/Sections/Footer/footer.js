@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import CompanyName from "../../../assets/images/noTab-footer-logo-name.svg"
 
-const Footer = ({ content }) => {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
@@ -11,33 +11,28 @@ const Footer = ({ content }) => {
             <div className="footer__contact">
               <CompanyName className="footer__logo" />
               <div className="footer__contact-block">
-                <p className="footer__contact-text text">
-                  {"Contact us:" || content.contactText.contactText}
-                </p>
+                <p className="footer__contact-text text">{"Contact us:"}</p>
                 <a
-                  href={`mailto:${"support@notab.com" || content.contactMail}`}
+                  href={`mailto:support@notab.com`}
                   className="footer__contact-address footer__link"
                 >
-                  {"support@notab.com" || content.contactMail}
+                  {"support@notab.com"}
                 </a>
               </div>
-              <p className="footer__copyright-text text">
-                {"© 2020 - NoTab®" || content.copyrightText.copyrightText}
-              </p>
+              <p className="footer__copyright-text text">{"© 2020 - NoTab®"}</p>
             </div>
             <div className="footer__attachment">
               <Link
                 className="footer__attachment-link footer__link"
                 to="/terms"
               >
-                {"Terms to use" || content.termsText.termsText}
+                {"Terms to use"}
               </Link>
               <Link
                 className="footer__attachment-link footer__link"
                 to="/privacy-policy"
               >
-                {"Privacy policy" ||
-                  content.privacyPolicyText.privacyPolicyText}
+                {"Privacy policy"}
               </Link>
             </div>
           </div>

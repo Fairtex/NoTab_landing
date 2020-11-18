@@ -5,7 +5,6 @@ function UITextInput(props, ref) {
   const {
     error,
     type = "text",
-    autofocus = false,
     disabled = false,
     className,
     ...rest
@@ -14,11 +13,11 @@ function UITextInput(props, ref) {
   return (
     <div className={"ui-textInput__container"}>
       <input
+        ref={ref}
         type={type}
         className={classNames("ui-textInput", className, {
           "ui-textInput--error": error,
         })}
-        autoFocus={autofocus}
         disabled={disabled}
         {...rest}
       />

@@ -3,9 +3,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import CompanyName from "../../../assets/images/noTab-header-logo-name.svg"
-import LoginIcon from "../../../assets/images/noTab-header-login-icon.svg"
+import Ellipse from "../../../assets/images/noTab-hero-bg-vector-2.svg"
 
-const Header = () => {
+const SubHeader = () => {
   const { logoImg } = useStaticQuery(graphql`
     {
       logoImg: file(relativePath: { eq: "noTab-header-logo.png" }) {
@@ -19,24 +19,24 @@ const Header = () => {
   `)
 
   return (
-    <header className="header">
+    <header className="sub-header">
       <div className="container">
-        <div className="header__inner">
-          <div className="header__logo-wrap">
+        <div className="sub-header__inner">
+          <div className="sub-header__logo-wrap">
             <Img
               fixed={logoImg.childImageSharp.fixed}
-              className="header__logo-img"
+              className="sub-header__logo-img"
             />
-            <CompanyName className="header__logo-text" />
+            <CompanyName className="sub-header__logo-text" />
           </div>
-          <a href="/#" className="header__link">
-            <LoginIcon className="header__icon" />
-            <span className="header__link-text">Login</span>
+          <a href="/#" className="sub-header__link">
+            <span className="sub-header__link-text">Download</span>
           </a>
+          <Ellipse className="sub-header__blur-ellipse" />
         </div>
       </div>
     </header>
   )
 }
 
-export default Header
+export default SubHeader

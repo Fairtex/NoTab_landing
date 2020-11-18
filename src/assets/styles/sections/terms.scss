@@ -1,0 +1,36 @@
+$block: '.terms';
+#{$block} {
+  &__inner {
+    padding: 0 7.7% 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 78px;
+    text-align: center;
+    margin-bottom: 8.7%;
+  }
+
+  &__block {
+    margin-right: 19.2%;
+    margin-bottom: 4.3%;
+    &-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 23px;
+    }
+    &-text {
+      font-style: normal;
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}
