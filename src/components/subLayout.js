@@ -12,10 +12,9 @@ import Footer from "./Sections/Footer/"
 import "./layout.css"
 
 const SubLayout = ({ children }) => {
-
   return (
     <>
-      <SubHeader/>
+      <SubHeader />
       <div className="wrapper">
         <main>{children}</main>
         <Footer />

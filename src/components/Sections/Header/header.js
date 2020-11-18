@@ -29,7 +29,7 @@ const Header = () => {
             />
             <CompanyName className="header__logo-text" />
           </div>
-          <a href="#" className="header__link">
+          <a href="/#" className="header__link">
             <LoginIcon className="header__icon" />
             <span className="header__link-text">Login</span>
           </a>

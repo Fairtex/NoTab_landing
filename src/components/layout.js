@@ -12,7 +12,6 @@ import Footer from "./Sections/Footer/"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-
   return (
     <>
       <Header />

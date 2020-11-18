@@ -13,6 +13,6 @@ export default function useRefScrollProgress(ref) {
 
     setStart(offsetTop / document.body.clientHeight)
     setEnd((offsetTop + rect.height) / document.body.clientHeight)
-  })
+  }, [ref])
   return { ref, start, end }
 }

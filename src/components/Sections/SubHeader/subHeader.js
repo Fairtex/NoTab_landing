@@ -29,7 +29,7 @@ const SubHeader = () => {
             />
             <CompanyName className="sub-header__logo-text" />
           </div>
-          <a href="#" className="sub-header__link">
+          <a href="/#" className="sub-header__link">
             <span className="sub-header__link-text">Download</span>
           </a>
           <Ellipse className="sub-header__blur-ellipse" />

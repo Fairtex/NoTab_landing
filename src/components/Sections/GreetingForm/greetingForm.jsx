@@ -81,7 +81,9 @@ export default function GreetingForm({ content }) {
             </form>
           </div>
           <div className="form-section__download-container">
-            <h3 className="form-section__download-text">DOWNLOAD OUR APP</h3>
+            <h3 className="form-section__download-text">
+              DOWNLOAD OUR APP
+            </h3>
             <Stores className="form-section__download-stores" />
           </div>
         </div>
