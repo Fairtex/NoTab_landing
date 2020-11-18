@@ -42,7 +42,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy:production": "yarn build && aws s3 sync --profile notab public/ s3://landing.notab.com --acl public-read"
   },
   "repository": {
     "type": "git",

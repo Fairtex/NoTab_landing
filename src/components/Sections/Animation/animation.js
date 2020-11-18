@@ -190,8 +190,9 @@ const Animation = ({ content }) => {
       query {
         iphoneAnim: file(relativePath: { eq: "animation-iphone.png" }) {
           childImageSharp {
-            fluid(maxWidth: 682, maxHeight: 1068, quality: 100) {
+            fluid(maxWidth: 682, maxHeight: 1068, quality: 90) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -199,8 +200,9 @@ const Animation = ({ content }) => {
           relativePath: { eq: "animation-overlay-image1.png" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 445, maxHeight: 420, quality: 100) {
+            fluid(maxWidth: 445, maxHeight: 420, quality: 90) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -208,71 +210,81 @@ const Animation = ({ content }) => {
           relativePath: { eq: "animation-overlay-image2.png" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 381, maxHeight: 355, quality: 100) {
+            fluid(maxWidth: 381, maxHeight: 355, quality: 90) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image1: file(relativePath: { eq: "animation-image1.png" }) {
           childImageSharp {
-            fluid(maxWidth: 379, maxHeight: 284, quality: 100) {
+            fluid(maxWidth: 379, maxHeight: 284, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image2: file(relativePath: { eq: "animation-image2.png" }) {
           childImageSharp {
-            fluid(maxWidth: 456, maxHeight: 430, quality: 100) {
+            fluid(maxWidth: 456, maxHeight: 430, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image3: file(relativePath: { eq: "animation-image3.png" }) {
           childImageSharp {
-            fluid(maxWidth: 310, maxHeight: 318, quality: 100) {
+            fluid(maxWidth: 310, maxHeight: 318, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image4: file(relativePath: { eq: "animation-image4.png" }) {
           childImageSharp {
-            fluid(maxWidth: 286, maxHeight: 348, quality: 100) {
+            fluid(maxWidth: 286, maxHeight: 348, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image5: file(relativePath: { eq: "animation-image5.png" }) {
           childImageSharp {
-            fluid(maxWidth: 286, maxHeight: 348, quality: 100) {
+            fluid(maxWidth: 286, maxHeight: 348, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image6: file(relativePath: { eq: "animation-image6.png" }) {
           childImageSharp {
-            fluid(maxWidth: 252, maxHeight: 298, quality: 100) {
+            fluid(maxWidth: 252, maxHeight: 298, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image7: file(relativePath: { eq: "animation-image7.png" }) {
           childImageSharp {
-            fluid(maxWidth: 320, maxHeight: 399, quality: 100) {
+            fluid(maxWidth: 320, maxHeight: 399, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image8: file(relativePath: { eq: "animation-image8.png" }) {
           childImageSharp {
-            fluid(maxWidth: 431, maxHeight: 364, quality: 100) {
+            fluid(maxWidth: 431, maxHeight: 364, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image9: file(relativePath: { eq: "animation-image9.png" }) {
           childImageSharp {
-            fluid(maxWidth: 286, maxHeight: 349, quality: 100) {
+            fluid(maxWidth: 286, maxHeight: 349, quality: 80) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
