@@ -7,15 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Header from "./Sections/Header/"
+import SubHeader from "./Sections/SubHeader/"
 import Footer from "./Sections/Footer/"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const SubLayout = ({ children }) => {
 
   return (
     <>
-      <Header />
+      <SubHeader/>
       <div className="wrapper">
         <main>{children}</main>
         <Footer />
@@ -24,8 +24,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+SubLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default SubLayout

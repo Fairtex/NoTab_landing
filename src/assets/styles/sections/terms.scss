@@ -1,4 +1,4 @@
-$block: '.privacy-policy';
+$block: '.terms';
 #{$block} {
   &__inner {
     padding: 0 7.7% 0;
@@ -31,18 +31,6 @@ $block: '.privacy-policy';
       font-size: 18px;
       line-height: 25px;
       margin-bottom: 10px;
-      &--bold {
-        font-weight: bold;
-      }
-    }
-    &-list {
-      list-style: disc inside;
-      font-size: 18px;
-      line-height: 25px;
-      margin-bottom: 3px;
-      & > li {
-        margin-bottom: 7px;
-      }
     }
   }
 }

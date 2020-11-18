@@ -1,10 +1,9 @@
 import React from "react"
-
-import Layout from "../components/layout"
+import SubLayout from "../components/subLayout"
 import SEO from "../components/seo"
 
 const PrivacyPolicy = () => (
-  <Layout>
+  <SubLayout>
     <SEO title="Privacy policy" />
     <section className="privacy-policy">
       <div className="container">
@@ -56,9 +55,8 @@ const PrivacyPolicy = () => (
             </p>
             <p className="privacy-policy__block-text">
               <span className="privacy-policy__block-text--bold">
-                {" "}
                 Active Collection.{" "}
-              </span>{" "}
+              </span>
               We collect information from you when you use the Sites. For
               example, when you create an account on our Sites, we may ask you
               to provide your name, email address, postal address, phone number
@@ -79,9 +77,8 @@ const PrivacyPolicy = () => (
             </p>
             <p className="privacy-policy__block-text">
               <span className="privacy-policy__block-text--bold">
-                {" "}
                 Passive Collection.{" "}
-              </span>{" "}
+              </span>
               When you use the Service, some information is also automatically
               collected, such as your Internet Protocol (IP) address, your
               operating system, the browser type, the address of a referring
@@ -328,7 +325,7 @@ const PrivacyPolicy = () => (
         </div>
       </div>
     </section>
-  </Layout>
+  </SubLayout>
 )
 
 export default PrivacyPolicy
