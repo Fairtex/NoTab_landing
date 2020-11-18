@@ -11,7 +11,7 @@ export default function GreetingForm({ content }) {
       if (!errors.hasOwnProperty(error.field)) errors[error.field] = true
     })
     return errors
-  }, state)
+  }, [state])
   return (
     <section className="form-section">
       <div className="container">
