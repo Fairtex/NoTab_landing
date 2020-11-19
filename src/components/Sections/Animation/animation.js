@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from "react"
+import React, { useRef, useMemo, useCallback } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
@@ -15,179 +15,182 @@ const Animation = ({ content }) => {
     return (end - start) / 15
   }, [start, end])
 
-  const endPos = useMemo(() => {
-    return start + stepSize * 12;
-  }, [start, stepSize])
+  const getStep = useCallback(
+    (step) => {
+      return start + stepSize * step;
+    },
+    [start, stepSize],
+  )
 
   const xPosRow = useTransform(
     scrollYProgress,
-    [start, start + stepSize * 2],
+    [start, getStep(2)],
     [0, (rectContainer.right - rectContainer.left) / 2]
   )
   const yPosContainer = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     [0, 0]
   )
   const degIphone = useTransform(
     scrollYProgress,
-    [start + stepSize * 2, start + stepSize * 3],
+    [getStep(2), getStep(3)],
     [90, 0]
   )
   const opacityText = useTransform(
     scrollYProgress,
-    [start + stepSize * 2, start + stepSize * 3],
+    [getStep(2), getStep(3)],
     [1, 0]
   )
   const scaleIphone = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     [1.27, 1]
   )
 
   const xPosOverlayImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "105%"]
   )
   const yPosOverlayImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "115%"]
   )
 
   const xPosOverlayImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 3, endPos],
+    [getStep(3), getStep(12)],
     ["0", "-115%"]
   )
   const yPosOverlayImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 3, endPos],
+    [getStep(3), getStep(12)],
     ["0", "-90%"]
   )
   const scaleOverlayImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 12, end],
+    [getStep(12), end],
     [1, 1.1]
   )
 
   const xPosImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "-40%"]
   )
   const yPosImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "205%"]
   )
 
   const xPosImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "-130%"]
   )
   const yPosImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "105%"]
   )
   const scaleImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 12, end],
+    [getStep(12), end],
     [1, 1.1]
   )
 
   const xPosImage3 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "-125%"]
   )
   const yPosImage3 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "77%"]
   )
 
   const xPosImage4 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "-195%"]
   )
   const yPosImage4 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "10%"]
   )
   const scaleImage4 = useTransform(
     scrollYProgress,
-    [start + stepSize * 12, end],
+    [getStep(12), end],
     [1, 1.1]
   )
 
   const xPosImage5 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "136%"]
   )
   const yPosImage5 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "29%"]
   )
   const scaleImage5 = useTransform(
     scrollYProgress,
-    [start + stepSize * 12, end],
+    [getStep(12), end],
     [1, 0.9]
   )
 
   const xPosImage6 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "289%"]
   )
   const yPosImage6 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "54%"]
   )
 
   const xPosImage7 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "196%"]
   )
   const yPosImage7 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "-58%"]
   )
 
   const xPosImage8 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "107%"]
   )
   const yPosImage8 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, endPos],
+    [getStep(4), getStep(12)],
     ["0", "-137%"]
   )
   const scaleImage8 = useTransform(
     scrollYProgress,
-    [start + stepSize * 12, end],
+    [getStep(12), end],
     [1, 1.1]
   )
 
   const xPosImage9 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "-242%"]
   )
   const yPosImage9 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, endPos],
+    [getStep(8), getStep(12)],
     ["0", "-146%"]
   )
 
