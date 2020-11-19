@@ -2,6 +2,13 @@ import React from "react"
 import Img from "gatsby-image"
 
 const OrderInterface = ({ content }) => {
+  const source = [
+    content.orderInterfaceImage.fluid,
+    {
+      ...content.orderInterfaceImageMobile.fluid,
+      media: `(max-width: 767px)`,
+    }
+  ]
   return (
     <section className="order">
       <div className="container">
@@ -15,7 +22,7 @@ const OrderInterface = ({ content }) => {
             </p>
           </div>
           <div className="order__img-wrap">
-            <Img fluid={content.orderInterfaceImage.fluid} />
+            <Img fluid={source} />
           </div>
         </div>
       </div>

@@ -4,6 +4,13 @@ import { Stores } from "@components/UIComponents"
 import Ellipse from "../../../assets/images/noTab-hero-bg-vector.svg"
 
 const Hero = ({ content }) => {
+  const sources = [
+    content.heroImage.fluid,
+    {
+      ...content.heroImageMobile.fluid,
+      media: `(max-width: 767px)`,
+    }
+  ];
   return (
     <section className="hero">
       <div className="container">
@@ -18,7 +25,7 @@ const Hero = ({ content }) => {
             <div className="hero__img-wrap">
               <Ellipse className="hero__blur-ellipse" />
               <Img 
-                fluid={content.heroImage.fluid} 
+                fluid={sources} 
                 loading="eager"
                 className="hero__img" />
             </div>

@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import SubHeader from "./Sections/SubHeader/"
 import Footer from "./Sections/Footer/"
-import "./layout.css"
 
 const SubLayout = ({ children }) => {
   return (

@@ -12,12 +12,15 @@ body {
   background-color: $background;
   color: $fontColor;
   font-family: $fontText;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 img {

@@ -5,11 +5,25 @@ import { Stores } from "@components/UIComponents"
 import Nightlife from "../../../assets/images/noTab-nightlife.svg"
 
 const QrCode = ({ content }) => {
+  const bgSource = [
+    content.qrCodeBackground.fluid,
+    {
+      ...content.qrCodeBackgroundMobile.fluid,
+      media: `(max-width: 767px)`,
+    }
+  ];
+  const imgSource = [
+    content.qrCodeImage.fluid,
+    {
+      ...content.qrCodeImageMobile.fluid,
+      media: `(max-width: 767px)`,
+    }
+  ]
   return (
     <BackgroundImage
       Tag="section"
       className="qr-code"
-      fluid={content.qrCodeBackground.fluid}
+      fluid={bgSource}
       backgroundColor="#000000"
     >
       <div className="qr-code__gradient"></div>
@@ -27,7 +41,7 @@ const QrCode = ({ content }) => {
               <Stores className="qr-code__info-stores" />
             </div>
             <div className="qr-code__img-wrap">
-              <Img fluid={content.qrCodeImage.fluid} />
+              <Img fluid={imgSource} />
             </div>
           </div>
         </div>

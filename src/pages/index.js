@@ -41,6 +41,12 @@ const IndexPage = () => {
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
+        heroImageMobile {
+          fluid(quality: 80, maxHeight: 323, maxWidth: 161) {
+            ...GatsbyContentfulFluid_noBase64
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+        }
         heroTitle
         heroText {
           heroText
@@ -75,13 +81,25 @@ const IndexPage = () => {
           idBlockText
         }
         idBlockBackground {
-          fluid(quality: 90) {
+          fluid(quality: 80) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        idBlockBackgroundMobile {
+          fluid(quality: 80) {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }
         }
         idBlockImage {
-          fluid(quality: 90) {
+          fluid(quality: 80) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        idBlockImageMobile {
+          fluid(quality: 80) {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }
@@ -103,13 +121,31 @@ const IndexPage = () => {
           qrCodeText
         }
         qrCodeBackground {
-          fluid(quality: 90) {
+          fluid(quality: 80) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        qrCodeBackgroundMobile {
+          fluid(quality: 80) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        qrCodeBackground2Mobile {
+          fluid(quality: 80) {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }
         }
         qrCodeImage {
-          fluid(quality: 90) {
+          fluid(quality: 80) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        qrCodeImageMobile {
+          fluid(quality: 80) {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }
@@ -123,7 +159,13 @@ const IndexPage = () => {
           generateQrText
         }
         generateQrImage {
-          fluid(quality: 90) {
+          fluid(quality: 80) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        generateQrImageMobile {
+          fluid(quality: 80) {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }
@@ -137,7 +179,13 @@ const IndexPage = () => {
           orderInterfaceText
         }
         orderInterfaceImage {
-          fluid(quality: 90) {
+          fluid(quality: 80) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        orderInterfaceImageMobile {
+          fluid(quality: 80)  {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }
