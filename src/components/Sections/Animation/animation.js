@@ -8,20 +8,26 @@ const Animation = ({ content }) => {
   const refGadget = useRef()
   const refContainer = useRef()
   const { scrollYProgress } = useViewportScroll()
-  const { start: s, end: e } = useRefScrollProgress(refContainer)
+  const { start, end } = useRefScrollProgress(refContainer)
   const rectContainer = useRect(refGadget)
 
-  const start = useMemo(() => s - 0.04, [s])
-  const end = useMemo(() => e - 0.09, [e])
-
   const stepSize = useMemo(() => {
-    return (end - start) / 11
+    return (end - start) / 15
   }, [start, end])
+
+  const endPos = useMemo(() => {
+    return start + stepSize * 12;
+  }, [start, stepSize])
 
   const xPosRow = useTransform(
     scrollYProgress,
     [start, start + stepSize * 2],
     [0, (rectContainer.right - rectContainer.left) / 2]
+  )
+  const yPosContainer = useTransform(
+    scrollYProgress,
+    [start + stepSize * 4, endPos],
+    [0, 0]
   )
   const degIphone = useTransform(
     scrollYProgress,
@@ -35,153 +41,153 @@ const Animation = ({ content }) => {
   )
   const scaleIphone = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, end],
+    [start + stepSize * 4, endPos],
     [1.27, 1]
   )
 
   const xPosOverlayImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "105%"]
   )
   const yPosOverlayImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "115%"]
   )
 
   const xPosOverlayImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 2, start + stepSize * 9],
+    [start + stepSize * 3, endPos],
     ["0", "-115%"]
   )
   const yPosOverlayImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 2, start + stepSize * 9],
+    [start + stepSize * 3, endPos],
     ["0", "-90%"]
   )
   const scaleOverlayImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 10, end],
+    [start + stepSize * 12, end],
     [1, 1.1]
   )
 
   const xPosImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "-40%"]
   )
   const yPosImage1 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "205%"]
   )
 
   const xPosImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 9],
+    [start + stepSize * 4, endPos],
     ["0", "-130%"]
   )
   const yPosImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 9],
+    [start + stepSize * 4, endPos],
     ["0", "105%"]
   )
   const scaleImage2 = useTransform(
     scrollYProgress,
-    [start + stepSize * 10, end],
+    [start + stepSize * 12, end],
     [1, 1.1]
   )
 
   const xPosImage3 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "-125%"]
   )
   const yPosImage3 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "77%"]
   )
 
   const xPosImage4 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 10],
+    [start + stepSize * 4, endPos],
     ["0", "-195%"]
   )
   const yPosImage4 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 10],
+    [start + stepSize * 4, endPos],
     ["0", "10%"]
   )
   const scaleImage4 = useTransform(
     scrollYProgress,
-    [start + stepSize * 10, end],
+    [start + stepSize * 12, end],
     [1, 1.1]
   )
 
   const xPosImage5 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 9],
+    [start + stepSize * 4, endPos],
     ["0", "136%"]
   )
   const yPosImage5 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 9],
+    [start + stepSize * 4, endPos],
     ["0", "29%"]
   )
   const scaleImage5 = useTransform(
     scrollYProgress,
-    [start + stepSize * 10, end],
+    [start + stepSize * 12, end],
     [1, 0.9]
   )
 
   const xPosImage6 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "289%"]
   )
   const yPosImage6 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "54%"]
   )
 
   const xPosImage7 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "196%"]
   )
   const yPosImage7 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "-58%"]
   )
 
   const xPosImage8 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 9],
+    [start + stepSize * 4, endPos],
     ["0", "107%"]
   )
   const yPosImage8 = useTransform(
     scrollYProgress,
-    [start + stepSize * 4, start + stepSize * 9],
+    [start + stepSize * 4, endPos],
     ["0", "-137%"]
   )
   const scaleImage8 = useTransform(
     scrollYProgress,
-    [start + stepSize * 10, end],
+    [start + stepSize * 12, end],
     [1, 1.1]
   )
 
   const xPosImage9 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "-242%"]
   )
   const yPosImage9 = useTransform(
     scrollYProgress,
-    [start + stepSize * 8, start + stepSize * 10],
+    [start + stepSize * 8, endPos],
     ["0", "-146%"]
   )
 
@@ -294,7 +300,13 @@ const Animation = ({ content }) => {
 
   return (
     <section className="animation">
-      <div className="container" ref={refContainer}>
+      <motion.div
+        className="container"
+        ref={refContainer}
+        style={{
+          y: yPosContainer,
+        }}
+      >
         <div className="animation__inner">
           <motion.div
             className="animation__row"
@@ -447,7 +459,7 @@ const Animation = ({ content }) => {
             </motion.div>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
