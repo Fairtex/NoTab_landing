@@ -72,6 +72,78 @@ const IndexPage = () => {
         animationBlockText {
           animationBlockText
         }
+        animationPhoneImg {
+          fluid(quality: 80, maxHeight: 745, maxWidth: 372) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationOverlayImg1 {
+          fluid(quality: 80, maxHeight: 260, maxWidth: 285) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationOverlayImg2 {
+          fluid(quality: 80, maxHeight: 270, maxWidth: 295) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg9 {
+          fluid(quality: 80, maxHeight: 188, maxWidth: 127) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg8 {
+          fluid(quality: 80, maxHeight: 204, maxWidth: 271) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg7 {
+          fluid(quality: 80, maxHeight: 238, maxWidth: 160) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg6 {
+          fluid(quality: 80, maxHeight: 138, maxWidth: 92) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg5 {
+          fluid(quality: 80, maxHeight: 222, maxWidth: 160) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg4 {
+          fluid(quality: 80, maxHeight: 189, maxWidth: 127) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg3 {
+          fluid(quality: 80, maxHeight: 156, maxWidth: 150) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg2 {
+          fluid(quality: 80, maxHeight: 271, maxWidth: 297) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        animationImg1 {
+          fluid(quality: 80, maxHeight: 121, maxWidth: 220) {
+            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
       }
       scanContent: contentfulIdBlockContent(
         id: { eq: "fc887afd-3e68-52a6-984d-a42eb61c0261" }
