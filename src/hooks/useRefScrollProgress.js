@@ -1,18 +1,17 @@
 import { useLayoutEffect, useState } from "react"
+import useRect from "./useRect"
 
 export default function useRefScrollProgress(ref) {
   const [start, setStart] = useState(null)
   const [end, setEnd] = useState(null)
+  const rect = useRect(ref)
   useLayoutEffect(() => {
-    if (!ref.current) {
-      return
-    }
-    const rect = ref.current.getBoundingClientRect()
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    const offsetTop = rect.top + scrollTop
-
-    setStart(offsetTop / document.body.clientHeight)
-    setEnd((offsetTop + rect.height) / document.body.clientHeight)
-  }, [ref])
+    const offsetTop = rect.top + window.scrollY
+    setStart(
+      (offsetTop - window.innerHeight + rect.height / 2) /
+        document.body.clientHeight
+    )
+    setEnd((offsetTop + rect.height / 2) / document.body.clientHeight)
+  }, [rect])
   return { ref, start, end }
 }

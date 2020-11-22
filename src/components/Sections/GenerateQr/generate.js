@@ -10,7 +10,7 @@ const GenerateQR = ({ content }) => {
     {
       ...content.generateQrImageMobile.fluid,
       media: `(max-width: 767px)`,
-    }
+    },
   ]
   return (
     <section className="generate-qr">

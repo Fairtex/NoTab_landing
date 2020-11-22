@@ -50,6 +50,7 @@ module.exports = {
           "@components": "src/components/",
           "@pages": "src/pages/",
           "@assets": "src/assets/",
+          "@hooks": "src/hooks/",
         },
       },
     },

@@ -10,14 +10,14 @@ const QrCode = ({ content }) => {
     {
       ...content.qrCodeBackgroundMobile.fluid,
       media: `(max-width: 767px)`,
-    }
-  ];
+    },
+  ]
   const imgSource = [
     content.qrCodeImage.fluid,
     {
       ...content.qrCodeImageMobile.fluid,
       media: `(max-width: 767px)`,
-    }
+    },
   ]
   return (
     <BackgroundImage

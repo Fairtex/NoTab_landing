@@ -4,12 +4,19 @@ $block: '.animation';
   
   &__inner {
     height: 100%;
-    padding: 5% 0 0;
+    padding: 5% 0 15%;
   }
 
   &__row {
     display: flex;
     flex-direction: row;
+    &-item {
+      display: flex;
+      flex: 1 1 0;
+      &--center {
+        justify-content: center;
+      }
+    }
   }
 
   &__container {
@@ -47,11 +54,6 @@ $block: '.animation';
   &__info {
     padding-top: 22.9%;
     margin-left: 33.8%;
-
-    &-container {
-      display: flex;
-      flex: 1 1 0px;
-    }
     &-text {
       font-size: 18px;
       line-height: 25px;
@@ -61,28 +63,32 @@ $block: '.animation';
   }
 
   &__gadget {
-    width: 71%;
-    position: relative;
     display: flex;
     justify-content: center;
-    top: -7%;
+    position: relative;
+    top: 16%;
+    flex: 1;
 
     &-container {
-      flex: 1 1 0px;
+      width: 71%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      top: -3%;
     }
 
     &::before {
       content: '';
       position: absolute;
-      left: 5%;
-      top: 5%;
-      width: 90%;
-      height: 90%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       background: radial-gradient(62.81% 61.84% at 69.82% 26.13%, #CA13A4 0%, #8A0DBC 35.94%, #530FDC 78.13%, #0303F0 100%);
       opacity: 0.1;
-      -webkit-filter: blur(40px);
-      filter: blur(40px);
+      -webkit-filter: blur(70px);
+      filter: blur(70px);
       z-index: 0;
     }
 
@@ -100,46 +106,32 @@ $block: '.animation';
       position: absolute;
       z-index: -1;
       top: 33%;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 5%;
-        top: 5%;
-        width: 90%;
-        height: 90%;
-        border-radius: 50%;
-        background: radial-gradient(62.81% 61.84% at 69.82% 26.13%, rgb(202, 19, 164) 0%, rgb(138, 13, 188) 35.94%, rgb(83, 15, 220) 78.13%, rgb(3, 3, 240) 100%);
-        opacity: 0.1;
-        filter: blur(40px);
-        z-index: 0;
-      }
       &-1 {
-        width: 55%;
+        width: 59%;
       }
       &-2 {
-        width: 67%;
+        width: 76.7%;
       }
       &-3 {
-        width: 45%;
+        width: 40.5%;
       }
       &-4 {
-        width: 44%;
+        width: 34%;
       }
       &-5 {
-        width: 41%;
+        width: 43%;
       }
       &-6 {
-        width: 37%;
+        width: 25%;
       }
       &-7 {
-        width: 48%;
+        width: 43.2%;
       }
       &-8 {
-        width: 63%;
+        width: 73%;
       }
       &-9 {
-        width: 44%;
+        width: 34%;
       }
     }
   }
