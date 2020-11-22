@@ -1,0 +1,14 @@
+$block: '.form';
+
+#{$block} {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 23px;
+    width: 100%;
+  }
+}

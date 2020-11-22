@@ -1,6 +1,7 @@
 import React from "react"
-import telFrame from "../../../assets/images/noTab-video-frame.png"
-import VideoBg from "../../../assets/images/noTab-video-background.svg"
+
+import telFrame from "@assets/images/noTab-video-frame.png"
+import VideoBg from "@assets/images/noTab-video-background.svg"
 
 const VideoBlock = ({ content }) => {
   return (

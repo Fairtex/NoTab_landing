@@ -1,22 +1,20 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { FormspreeProvider } from "@formspree/react"
+import Layout from "@components/layout"
+import SEO from "@components/seo"
+import Hero from "@components/Sections/Hero"
+import Partners from "@components/Sections/Partners"
+import Animation from "@components/Sections/Animation"
+import CookieBar from "@components/Sections/CookieBanner"
+import IdScanner from "@components/Sections/ID-scan"
+import Tool from "@components/Sections/Tool"
+import QrCode from "@components/Sections/QR-Code"
+import GenerateQR from "@components/Sections/GenerateQr"
+import OrderInterface from "@components/Sections/Order"
+import VideoBlock from "@components/Sections/VideoBlock"
+import GreetingForm from "@components/Sections/GreetingForm"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/Sections/Hero"
-import Partners from "../components/Sections/Partners"
-import Animation from "../components/Sections/Animation"
-import CookieBar from "../components/Sections/CookieBanner"
-import IdScanner from "../components/Sections/ID-scan"
-import Tool from "../components/Sections/Tool"
-import QrCode from "../components/Sections/QR-Code"
-import GenerateQR from "../components/Sections/GenerateQr"
-import OrderInterface from "../components/Sections/Order"
-import VideoBlock from "../components/Sections/VideoBlock"
-import GreetingForm from "../components/Sections/GreetingForm"
-
-import "../assets/styles/style.scss"
+import "@assets/styles/style.scss"
 
 const IndexPage = () => {
   const {
@@ -257,7 +255,7 @@ const IndexPage = () => {
           }
         }
         orderInterfaceImageMobile {
-          fluid(quality: 80)  {
+          fluid(quality: 80) {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }
@@ -285,22 +283,20 @@ const IndexPage = () => {
   `)
 
   return (
-    <FormspreeProvider project="1541005978974027495">
-      <Layout>
-        <SEO title="Home" />
-        <Hero content={heroContent} />
-        <Partners content={partnersContent} />
-        <Animation content={animationContent} />
-        <CookieBar />
-        <IdScanner content={scanContent} />
-        <Tool content={toolContent} />
-        <QrCode content={qrCodeContent} />
-        <GenerateQR content={generateQrCode} />
-        <OrderInterface content={orderContent} />
-        <VideoBlock content={videoContent} />
-        <GreetingForm content={formContent} />
-      </Layout>
-    </FormspreeProvider>
+    <Layout>
+      <SEO title="Home" />
+      <Hero content={heroContent} />
+      <Partners content={partnersContent} />
+      <Animation content={animationContent} />
+      <CookieBar />
+      <IdScanner content={scanContent} />
+      <Tool content={toolContent} />
+      <QrCode content={qrCodeContent} />
+      <GenerateQR content={generateQrCode} />
+      <OrderInterface content={orderContent} />
+      <VideoBlock content={videoContent} />
+      <GreetingForm content={formContent} />
+    </Layout>
   )
 }
 

@@ -8,14 +8,14 @@ const IdScanner = ({ content }) => {
     {
       ...content.idBlockBackgroundMobile.fluid,
       media: `(max-width: 767px)`,
-    }
-  ];
+    },
+  ]
   const imgSource = [
     content.idBlockImage.fluid,
     {
       ...content.idBlockImageMobile.fluid,
       media: `(max-width: 767px)`,
-    }
+    },
   ]
   return (
     <BackgroundImage

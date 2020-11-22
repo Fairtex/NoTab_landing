@@ -1,7 +1,8 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Stores } from "@components/UIComponents"
-import Ellipse from "../../../assets/images/noTab-hero-bg-vector.svg"
+
+import Ellipse from "@assets/images/noTab-hero-bg-vector.svg"
 
 const Hero = ({ content }) => {
   const sources = [
@@ -9,8 +10,8 @@ const Hero = ({ content }) => {
     {
       ...content.heroImageMobile.fluid,
       media: `(max-width: 767px)`,
-    }
-  ];
+    },
+  ]
   return (
     <section className="hero">
       <div className="container">
@@ -24,10 +25,7 @@ const Hero = ({ content }) => {
             </div>
             <div className="hero__img-wrap">
               <Ellipse className="hero__blur-ellipse" />
-              <Img 
-                fluid={sources} 
-                loading="eager"
-                className="hero__img" />
+              <Img fluid={sources} loading="eager" className="hero__img" />
             </div>
           </div>
           <div className="hero__download hero__download--space">

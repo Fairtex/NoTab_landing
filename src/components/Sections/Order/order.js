@@ -7,7 +7,7 @@ const OrderInterface = ({ content }) => {
     {
       ...content.orderInterfaceImageMobile.fluid,
       media: `(max-width: 767px)`,
-    }
+    },
   ]
   return (
     <section className="order">

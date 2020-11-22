@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import CompanyName from "../../../assets/images/noTab-header-logo-name.svg"
-import LoginIcon from "../../../assets/images/noTab-header-login-icon.svg"
+import CompanyName from "@assets/images/noTab-header-logo-name.svg"
+import LoginIcon from "@assets/images/noTab-header-login-icon.svg"
 
 const Header = () => {
   const { logoImg } = useStaticQuery(graphql`
