@@ -1,7 +1,7 @@
-export { default as UITextInput } from "./UITextInput"
+export { default as UITextInput } from "./uiTextInput"
 
-export { default as UITextArea } from "./UITextArea"
+export { default as UITextArea } from "./uiTextArea"
 
-export { default as UIButton } from "./UIButton"
+export { default as UIButton } from "./uiButton"
 
-export { default as Stores } from "./Stores"
+export { default as Stores } from "./stores"

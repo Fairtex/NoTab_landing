@@ -1,6 +1,6 @@
 import React from "react"
-import SubLayout from "../components/subLayout"
-import SEO from "../components/seo"
+import SubLayout from "@components/subLayout"
+import SEO from "@components/seo"
 
 const PrivacyPolicy = () => (
   <SubLayout>

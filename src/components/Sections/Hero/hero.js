@@ -1,7 +1,8 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Stores } from "@components/UIComponents"
-import Ellipse from "../../../assets/images/noTab-hero-bg-vector.svg"
+
+import Ellipse from "@assets/images/noTab-hero-bg-vector.svg"
 
 const Hero = ({ content }) => {
   const sources = [

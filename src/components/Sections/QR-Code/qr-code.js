@@ -2,7 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { Stores } from "@components/UIComponents"
-import Nightlife from "../../../assets/images/noTab-nightlife.svg"
+
+import Nightlife from "@assets/images/noTab-nightlife.svg"
 
 const QrCode = ({ content }) => {
   const bgSource = [

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import CompanyName from "../../../assets/images/noTab-footer-logo-name.svg"
+
+import CompanyName from "@assets/images/noTab-footer-logo-name.svg"
 
 const Footer = () => {
   return (

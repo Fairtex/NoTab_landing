@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import CompanyName from "../../../assets/images/noTab-header-logo-name.svg"
-import Ellipse from "../../../assets/images/noTab-hero-bg-vector-2.svg"
+import CompanyName from "@assets/images/noTab-header-logo-name.svg"
+import Ellipse from "@assets/images/noTab-hero-bg-vector-2.svg"
 
 const SubHeader = () => {
   const { logoImg } = useStaticQuery(graphql`
