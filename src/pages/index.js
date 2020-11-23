@@ -257,7 +257,7 @@ const IndexPage = () => {
           }
         }
         orderInterfaceImageMobile {
-          fluid(quality: 80)  {
+          fluid(quality: 80) {
             ...GatsbyContentfulFluid
             ...GatsbyContentfulFluid_withWebp
           }

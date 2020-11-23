@@ -2,13 +2,7 @@ import React from "react"
 import classNames from "classnames"
 
 function UITextInput(props, ref) {
-  const {
-    error,
-    type = "text",
-    disabled = false,
-    className,
-    ...rest
-  } = props
+  const { error, type = "text", disabled = false, className, ...rest } = props
 
   return (
     <div className={"ui-textInput__container"}>
