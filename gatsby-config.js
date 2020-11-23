@@ -51,6 +51,7 @@ module.exports = {
           "@pages": "src/pages/",
           "@assets": "src/assets/",
           "@utils": "src/utils/",
+          "@hooks": "src/hooks/",
         },
       },
     },
